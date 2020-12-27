@@ -1,0 +1,66 @@
+.qa
+	padding: 80px 0
+	.container
+	.block-title
+		text-align: center
+	.inner
+		position: relative
+		+flex(row,null,null,wrap)
+	.ui-tabs-nav
+		max-width: 370px
+		width: 100%
+		// align-self: center
+		li
+			+trs
+			&:not(:last-child)
+				border-bottom: 1px solid lighten($dark, 45%)
+			&.ui-tabs-active
+				border-bottom: none
+				a
+					background: $tab-gradient
+					font-weight: 700
+		a
+			color: $dark
+			font: 500 16px/1.2 'Exo', sans-serif
+			text-transform: uppercase
+			display: block
+			background: $gray2
+			padding: 16px 20px
+	.tab
+		max-width: 420px
+		width: 100%
+		background: white
+		padding: 30px
+		box-shadow: $tab-shadow
+		margin: 10px 10px 10px 0
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			z-index: -1
+			left: 0
+			top: -10px
+			right: -10px
+			bottom: -10px
+			left: 0
+			background: $gray2
+		&__title
+			text-transform: uppercase
+			color: $yellow
+			font: 800 24px/1.5 'Exo', sans-serif
+		&__text
+			font-size: 16px
+			margin: 14px 0 0 0
+
+	.man
+		position: absolute
+		right: -50px
+		bottom: 0
+	.img
+		max-width: 370px
+		width: 100%
+
+
+
+

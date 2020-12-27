@@ -1,0 +1,67 @@
+.quality
+	background: $gray-gradient2
+	padding: 10px 0 55px 0
+	.block-title
+		font-size: 30px
+		text-align: center
+		margin: 0 0 30px 0
+	.inner
+		position: relative
+	.man
+		position: absolute
+		bottom: -55px
+		left: 50%
+		transform: translate(-50%, 0)
+		display: block
+		z-index: 2
+	.circles
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	.items
+		+flex(row, between, null, wrap)
+	.item
+		+flex(row, center, center, wrap)
+		width: 50%
+		margin: 0 0 50px 0
+		&:nth-child(even)
+			.item-inner
+				margin-left: 15px
+		&:nth-child(odd)
+			text-align: right
+			flex-direction: row-reverse
+			.item-inner
+				margin-right: 15px
+		&:nth-child(1)
+			transform: translate(-10%, 0)
+		&:nth-child(2)
+			transform: translate(10%, 0)
+		&:nth-child(3)
+			transform: translate(-20%, 0)
+		&:nth-child(4)
+			transform: translate(20%, 0)
+		&:nth-child(5)
+			transform: translate(-20%, 0)
+		&:nth-child(6)
+			transform: translate(20%, 0)
+		&:nth-child(7)
+			transform: translate(-10%, 0)
+			margin: 0
+		&:nth-child(8)
+			transform: translate(10%, 0)
+			margin: 0
+		&-icon
+			background: $yellow-gradient2
+			width: 70px
+			height: 70px
+			border-radius: 100%
+			+flex(row, center, center, wrap)
+		&-inner
+			max-width: 285px
+			width: 100%
+		&__title
+			font-weight: 700
+			font-size: 20px
+		&__text
+			line-height: 1.4

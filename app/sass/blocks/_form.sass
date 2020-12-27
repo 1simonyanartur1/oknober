@@ -1,0 +1,146 @@
+.form
+	&-item
+	&-social
+		margin: 0 0 15px 0
+		+flex(row, null, null, nowrap)
+		.radio
+			&:first-child .radio__btn
+				border-radius: 4px 0 0 4px
+			&:last-child .radio__btn
+				border-radius: 0 4px 4px 0
+	.radio
+		display: block
+		position: relative
+		cursor: pointer
+		user-select: none
+		&__input
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			cursor: pointer
+			z-index: 2
+			&:checked ~ .radio__btn
+				background: $blue
+				.radio__text
+					color: white
+				path
+					fill: white
+		&__btn
+			+trs
+			background: white
+			+flex(column, center, center, nowrap)
+			width: 90px
+			height: 70px
+		&__text
+			font-size: 10px
+			margin: 8px 0 0 0
+		svg
+			display: block
+			height: 24px
+		path
+			+trs
+			fill: black
+	&__input
+		height: 60px
+		width: 270px
+		background: white
+		border-radius: 4px
+		padding: 0 50px 0 30px
+		font-size: 16px
+		letter-spacing: 0.01em
+		border: 2px solid transparent
+		+trs
+		&:hover,
+		&:focus
+			border: 2px solid $dark
+	&__btn
+		text-align: center
+		color: white
+		text-transform: uppercase
+		font: 800 14px 'Exo', sans-serif
+		letter-spacing: 0.01em
+		width: 285px
+		height: 60px
+		border-radius: 4px
+		background: $dark
+		+trs
+		cursor: pointer
+		border: 2px solid $dark
+		&:hover
+			background: white
+			color: $dark
+	.checkbox
+		position: relative
+		user-select: none
+		width: 100%
+		display: block
+		margin: 21px 0 0 0
+		cursor: pointer
+		&__input
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			cursor: pointer
+			z-index: 2
+			&:checked ~ .checkbox__text
+				&::after
+					opacity: 1
+		&__text
+			font-size: 12px
+			position: relative
+			padding-left: 30px
+			&:hover
+				&:before
+					background: $gray2
+			&::before
+				content: ''
+				display: block
+				+trs
+				width: 22px
+				height: 20px
+				border: 1px solid $dark
+				content: ''
+				border-radius: 2px
+				position: absolute
+				left: 0
+				top: -5px
+			&::after
+				content: ''
+				display: block
+				width: 18px
+				height: 14px
+				position: absolute
+				left: 3px
+				top: -1px
+				+trs
+				opacity: 0
+				+bg(null, null, 'icons/check.svg', no-repeat, center, center, contain)
+			a
+				font-size: 12px
+				color: $dark
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+	&__text
+		font-size: 11px
+		a
+			font-size: 11px
+			color: $dark
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+
+.form-title
+	font-weight: 600
+	font-size: 16px
+	text-transform: uppercase
+	color: white
+	text-shadow: 0px 4px 20px rgba(51, 51, 51, 0.3)
+	margin: 0 0 16px 0

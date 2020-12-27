@@ -1,0 +1,108 @@
+// main page elements
+body
+	font-size: 16px
+	color: $dark
+	font-family: 'Fira Sans', sans-serif
+	font-weight: 400
+	background: white
+	overflow-x: hidden
+	// +bg(fixed, white, 'mainblock/bg.jpg', center, center, no-repeat)
+	// +scrollbar(10px, auto, $logo-blue, $footer-gray, white)
+
+.page-container
+	max-width: 1920px
+	width: 100%
+	margin: 0 auto
+	overflow: hidden
+
+.container
+	max-width: 1170px
+	width: 100%
+	padding: 0
+	margin: 0 auto
+
+// duplicate blocks
+.seo
+	padding: 45px 0
+	+mq($max-width: 1000px)
+	padding: 30px 0
+	
+.no-page
+	margin: 150px 0
+	.action
+		max-width: 350px
+
+.block-label
+	background: $label-bg
+	margin: 0 0 11px 0
+	padding: 10px 20px
+	font-weight: 500
+	font-size: 14px
+	display: inline-block
+.block-title
+	font: 800 36px/1.5 'Exo', sans-serif
+	margin: 0 0 30px 0
+	text-transform: uppercase
+.block-text
+	color: $dark
+	font-size: 16px
+	line-height: 1.5
+
+
+.btn-dark
+	padding: 25px
+	background: $dark
+	border-radius: 4px
+	text-align: center
+	text-transform: uppercase
+	color: white
+	font: 800 14px/.45 'Exo', sans-serif
+	border: 2px solid $dark
+	+trs
+	&:hover
+		color: $dark
+		background: white
+
+
+.btn-white
+	display: inline-block
+	background: white
+	border-radius: 4px
+	padding: 25px 50px
+	text-align: center
+	text-transform: uppercase
+	font: 800 14px/.45 'Exo', sans-serif
+	box-shadow: $btn-white-shadow
+	cursor: pointer
+	+trs
+	letter-spacing: 0.01em
+	color: $dark
+	&:hover
+		background: $dark
+		color: white
+
+.btn-yellow
+	border-radius: 4px
+	padding: 25px 40px
+	background: $btn-yellow-gradient
+	color: $dark
+	font: 800 14px/.45 'Exo', sans-serif
+	text-transform: uppercase
+	letter-spacing: 0.01em
+	border: 2px solid transparent
+	text-align: center
+	&:hover
+		border-color: $yellow
+		background: white
+
+.slider .arrow
+	+flex(row, center, center, wrap)
+	cursor: pointer
+	border-radius: 4px
+	background: white
+	+trs
+	position: absolute
+	width: 30px
+	height: 30px
+	&:hover
+		background: $yellow-gradient

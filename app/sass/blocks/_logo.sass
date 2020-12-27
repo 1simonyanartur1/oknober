@@ -1,0 +1,21 @@
+.logo
+	&__title
+		color: $dark
+		text-transform: uppercase
+		font: 700 20px/1 'Exo', sans-serif
+		+trs
+		span
+			color: $yellow
+	&__subtitle
+		font: 500 12px/1 'Exo', sans-serif
+		color: $gray
+		margin: 10px 0 0 0
+		+trs
+		b
+			+trs
+			color: $dark
+	&:hover
+		.logo__title,
+		.logo__subtitle,
+		.logo__subtitle b
+			color: $yellow

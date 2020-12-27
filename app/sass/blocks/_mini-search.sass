@@ -1,0 +1,31 @@
+.mini-search
+	position: relative
+	&__input
+		font-weight: 700
+		font-size: 16px
+		display: block
+		width: 200px
+		height: 40px
+		border-bottom: 1px solid lighten($dark, 65)
+		padding: 0 30px 0 0
+		+trs
+		&:hover,
+		&:focus
+			border-color: $yellow
+	&__btn
+		position: absolute
+		z-index: 2
+		right: 0
+		top: 50%
+		transform: translate(0, -50%)
+		cursor: pointer
+		&:hover
+			path
+				fill: $yellow
+		svg
+			display: block
+			width: 20px
+			height: auto
+		path
+			fill: $dark
+			+trs

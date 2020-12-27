@@ -1,0 +1,26 @@
+.contact
+	background: $gray-gradient
+	padding: 90px 0
+	.container
+		+flex(row, between, start, wrap)
+	.inner
+		max-width: 525px
+		width: 100%
+	.block
+		margin: 0 0 20px 0
+		&__title
+			text-transform: uppercase
+			font-size: 9px
+			margin: 0 0 8px 0
+			letter-spacing: .2em
+		&__text
+			font-size: 16px
+			a
+				color: $dark
+				&:hover
+					color: $yellow
+
+	#map
+		max-width: 570px
+		width: 100%
+		height: 496px

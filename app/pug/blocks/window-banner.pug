@@ -1,0 +1,20 @@
+section.window-banner
+	.container
+		img.circles(src=img+"mini-banner/circles2.png", alt="")
+		img.circles2(src=img+"mini-banner/circles3.png", alt="")
+		img.window(src=img+"mini-banner/window.png", alt="")
+		img.man(src=img+"mini-banner/man.png", alt="")
+		.inner
+			img.arrow(src=img+"mini-banner/arrow.png", alt="")
+			.block-title Сомневаетесь в размерах <br> и типах окон, которые Вам нужны?
+			.block-text Вызовите замерщика, который всё Вам расскажет и покажет. <b>Это БЕСПЛАТНО!</b>
+		form.form(action="#", method="post")
+			.form-item
+				input.form__input(type="tel" name="q-banner-name" placeholder="+7 (___) ___-__-__")
+			.form-action
+				button.form__btn(type="submit") отправить заявку
+			.form-item
+				label.checkbox(for="window-banner-checkbox")
+					input.checkbox__input(type="checkbox", name="window-banner-checkbox" id="window-banner-checkbox" checked)
+					.checkbox__text Я ознакомлен(а) и согласен(а) с 
+						a(href="http://", target="_blank", rel="noopener noreferrer") правилами обработками моих персональных данных

@@ -1,0 +1,61 @@
+.footer
+	background: white
+	padding: 30px 0
+	.top
+		+flex(row, between, start, wrap)
+	.column
+		width: 24%
+	.menu-list
+		margin: 0 0 32px 0
+		li
+			margin: 4px 0
+			&:first-child
+				a
+					font-weight: 700
+					text-transform: uppercase
+		a
+			font-size: 16px
+			line-height: 1.5
+			color: $dark
+			&:hover
+				color: $yellow
+	.bottom
+		position: relative
+		padding: 30px 0 0 0
+		+flex(row, between, center, wrap)
+		&::before
+			content: ''
+			display: block
+			height: 1px
+			width: 100vw
+			background: $dark
+			opacity: .15
+			position: absolute
+			left: 50%
+			top: 0
+			transform: translate(-50%,0)
+	.infotext
+		font: 500 12px 'Exo', sans-serif
+		color: $dark
+		margin: 10px 0 0 0
+	.mainlogo
+		display: block
+		width: 137px
+		height: auto
+		margin: 48px 0 0 0
+	.payment
+		width: 100%
+		+flex(row, center, center, wrap)
+		margin: 15px 0 0 0
+		img
+			margin: 5px 9px
+	.tels
+		margin: 57px 0 0 0
+	.text
+		color: $dark
+		text-align: center
+		b
+			font-size: 16px
+			font-weight: 500
+			display: block
+			margin: 0 0 10px 0
