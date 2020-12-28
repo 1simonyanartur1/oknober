@@ -6,7 +6,6 @@ body
 	font-weight: 400
 	background: white
 	overflow-x: hidden
-	// +bg(fixed, white, 'mainblock/bg.jpg', center, center, no-repeat)
 	// +scrollbar(10px, auto, $logo-blue, $footer-gray, white)
 
 .page-container
@@ -14,6 +13,7 @@ body
 	width: 100%
 	margin: 0 auto
 	overflow: hidden
+	margin: -30px 0 0 0
 
 .container
 	max-width: 1170px
@@ -59,6 +59,7 @@ body
 	font: 800 14px/.45 'Exo', sans-serif
 	border: 2px solid $dark
 	+trs
+	cursor: pointer
 	&:hover
 		color: $dark
 		background: white
@@ -77,6 +78,7 @@ body
 	+trs
 	letter-spacing: 0.01em
 	color: $dark
+	cursor: pointer
 	&:hover
 		background: $dark
 		color: white
@@ -91,6 +93,7 @@ body
 	letter-spacing: 0.01em
 	border: 2px solid transparent
 	text-align: center
+	cursor: pointer
 	&:hover
 		border-color: $yellow
 		background: white

@@ -1,6 +1,13 @@
 (function ($) {
 	$(document).ready(function () {
 
+		$('.consult-icon').on('click', function() {
+			$('.consult').removeClass('mini');
+		});
+		$('.consult__close').on('click', function() {
+			$('.consult').addClass('mini');
+		});
+
 		$('.additions .slider').slick({
 			arrows: true,
 			dots: false,

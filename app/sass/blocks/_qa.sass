@@ -1,6 +1,19 @@
 .qa
 	padding: 80px 0
-	.container
+	&.type2
+		.ui-tabs-nav
+			max-width: 270px
+		.tab
+			max-width: 100%
+			width: calc( 100% - 290px )
+			margin: 10px
+			&:before
+				left: -10px
+			img
+				float: right
+				margin: 0 0 40px 40px
+			.text-container
+				margin: 14px 0 0 0
 	.block-title
 		text-align: center
 	.inner
@@ -9,7 +22,6 @@
 	.ui-tabs-nav
 		max-width: 370px
 		width: 100%
-		// align-self: center
 		li
 			+trs
 			&:not(:last-child)

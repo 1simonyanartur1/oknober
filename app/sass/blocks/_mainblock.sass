@@ -1,0 +1,78 @@
+.mainblock
+	+bg(null, null, 'mainblock/bg.jpg', no-repeat, center, center, cover)
+	padding: 78px 0 102px 0
+	.container
+		+flex(row, between, start, wrap)
+	.left
+		max-width: 681px
+		width: 100%
+	.right
+		max-width: 346px
+		width: 100%
+		padding: 28px 41px
+		box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1)
+		border-radius: 10px
+		+bg(null, white, 'mainblock/percent.png', no-repeat, right, top, auto)
+	.form-bigtitle
+		text-transform: uppercase
+		font: 800 26px/1 'Exo', sans-serif
+		padding: 15px
+	.form
+		&-social
+			border-radius: 4px
+			overflow: hidden
+			box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1)
+		&__input
+			width: 100%
+			background: $gray2
+		&__btn
+			margin: 15px 0
+			width: 100%
+		&__text
+			text-align: center
+
+	&__title
+		font: 900 48px/1 'Exo', sans-serif
+		text-transform: uppercase
+		.yellow
+			color: $yellow
+		.mini
+			font-size: 30px
+	&-protect
+		margin: 29px 0 34px 0
+		+flex(row, null, center, wrap)
+		&__icon
+			display: block
+			width: 46px
+			margin: 0 16px 0 0
+		&__text
+			line-height: 1.5
+			max-width: 400px
+	&-delivery
+		background: $dark
+		border-radius: 4px
+		padding: 10px 30px
+		color: white
+		+flex(row, between, center, wrap)
+		display: inline-flex
+		&-inner
+			margin: 0 10px 0 0
+		&__title
+			font: 900 24px/1 'Exo', sans-serif
+		&__text
+			margin: 10px 0 0 0
+			font: 400 14px/1 'Exo', sans-serif
+		&__icon
+			display: block
+			width: 66px
+	.list
+		margin: 27px 0 0 0
+		+flex(row, start, end, wrap)
+		&-item
+			margin: 0 50px 0 0
+			&__title
+				font: 800 18px 'Exo', sans-serif
+				span
+					font-size: 72px
+			&__text
+				margin: 10px 0 0 0

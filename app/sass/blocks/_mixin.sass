@@ -43,12 +43,14 @@
 		flex-wrap: nowrap
 
 // change scrollbar
-=scrollbar($sb-width, $sb-height, $sb-color, $sb-bgcolor, $sb-hover)
+=scrollbar($sb-width, $sb-height, $sb-color, $sb-bgcolor, $sb-hover, $sb-radius)
 	&::-webkit-scrollbar
 		width: $sb-width
 		height: $sb-height
 	&::-webkit-scrollbar-thumb
 		background: $sb-color
+		border-radius: $sb-radius
+		cursor: pointer
 	&::-webkit-scrollbar-track
 		background: $sb-bgcolor
 	&::-webkit-scrollbar-thumb:hover

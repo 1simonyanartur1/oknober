@@ -1,0 +1,97 @@
+.consult
+	position: fixed
+	z-index: 10
+	right: 20px
+	bottom: 20px
+	padding: 20px
+	max-width: 382px
+	width: 100%
+	border-radius: 4px
+	background: white
+	+flex(row, between, start, wrap)
+	box-shadow: 0px 4px 30px rgba(51, 51, 51, 0.2)
+	+trs
+	cursor: pointer
+	&.mini
+		width: auto
+		padding: 0
+		border-radius: 100%
+		.consult-inner
+			display: none
+		.consult__close
+			display: none
+	&__close
+		position: absolute
+		right: 22px
+		top: 22px
+		cursor: pointer
+		+trs
+		&:hover
+			path
+				opacity: 1
+				// fill: $yellow
+		svg
+			display: block
+			width: 19px
+		path
+			+trs
+			fill: $dark
+			opacity: .2
+	&-icon
+		border-radius: 100%
+		padding: 3px
+		width: 90px
+		background: white
+		position: relative
+		&:before
+			content: ''
+			display: block
+			width: 14px
+			height: 14px
+			border-radius: 100%
+			background: $green
+			position: absolute
+			right: 14px
+			bottom: 14px
+			transform: translate(50%, 50%)
+	&__img
+		border-radius: 100%
+		display: block
+		width: 100%
+		height: auto
+	&-inner
+		+trs
+		margin: 17px 0 0 30px
+		max-width: 222px
+		width: 100%
+	&__title
+		font: 700 20px/1 'Exo', sans-serif
+	&__text
+		font-size: 14px
+		line-height: 1.2
+		margin: 8px 0 5px 0
+	&__tel
+		letter-spacing: 0.01em
+		color: $dark
+		font: 800 20px/1 'Exo', sans-serif
+		&:hover
+			color: $yellow
+	&-links
+		+flex(row, null, null, wrap)
+		margin: 8px 0 0 0
+	&-link
+		background: $gray2
+		width: 36px
+		height: 36px
+		+flex(row, center, center, nowrap)
+		border-radius: 100%
+		margin: 0 4px 0 0
+		&:hover
+			path
+				fill: $yellow
+		svg
+			height: 15px
+			display: block
+		path
+			+trs
+			fill: gray
