@@ -1,11 +1,20 @@
 .mainblock
 	+bg(null, null, 'mainblock/bg.jpg', no-repeat, center, center, cover)
 	padding: 78px 0 102px 0
+	+mq($max-width: 1200px)
+		padding: 50px 0
+	+mq($max-width: 575px)
+		+bg(null, null, 'mainblock/bg2.jpg', no-repeat, center, bottom, contain)
 	.container
 		+flex(row, between, start, wrap)
 	.left
 		max-width: 681px
 		width: 100%
+		+mq($max-width: 1200px)
+			max-width: calc( 100% - 350px )
+		+mq($max-width: 700px)
+			max-width: 100%
+			margin: 0 0 15px 0
 	.right
 		max-width: 346px
 		width: 100%
@@ -13,6 +22,8 @@
 		box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1)
 		border-radius: 10px
 		+bg(null, white, 'mainblock/percent.png', no-repeat, right, top, auto)
+		+mq($max-width: 575px)
+			padding: 15px
 	.form-bigtitle
 		text-transform: uppercase
 		font: 800 26px/1 'Exo', sans-serif
@@ -34,17 +45,29 @@
 	&__title
 		font: 900 48px/1 'Exo', sans-serif
 		text-transform: uppercase
+		+mq($max-width: 1200px)
+			font-size: 38px
+		+mq($max-width: 575px)
+			font-size: 30px
 		.yellow
 			color: $yellow
 		.mini
 			font-size: 30px
+			+mq($max-width: 1200px)
+				font-size: 24px
+			+mq($max-width: 575px)
+				font-size: 22px
 	&-protect
 		margin: 29px 0 34px 0
 		+flex(row, null, center, wrap)
+		+mq($max-width: 575px)
+			margin: 15px 0
 		&__icon
 			display: block
 			width: 46px
 			margin: 0 16px 0 0
+			+mq($max-width: 575px)
+				display: none
 		&__text
 			line-height: 1.5
 			max-width: 400px
@@ -55,6 +78,8 @@
 		color: white
 		+flex(row, between, center, wrap)
 		display: inline-flex
+		+mq($max-width: 575px)
+			padding: 10px
 		&-inner
 			margin: 0 10px 0 0
 		&__title
@@ -65,14 +90,33 @@
 		&__icon
 			display: block
 			width: 66px
+			+mq($max-width: 575px)
+				display: none
 	.list
 		margin: 27px 0 0 0
-		+flex(row, start, end, wrap)
+		+flex(row, start, start, wrap)
 		&-item
 			margin: 0 50px 0 0
+			+mq($max-width: 1200px)
+				margin: 0 2%
+				max-width: 30%
+			+mq($max-width: 800px)
+				max-width: 46%
+			+mq($max-width: 575px)
+				width: 48%
 			&__title
 				font: 800 18px 'Exo', sans-serif
+				+mq($max-width: 1200px)
+					font-size: 16px
+				+mq($max-width: 575px)
+					font-size: 15px
 				span
 					font-size: 72px
+					+mq($max-width: 1200px)
+						font-size: 50px
+					+mq($max-width: 575px)
+						font-size: 36px
 			&__text
 				margin: 10px 0 0 0
+				+mq($max-width: 575px)
+					font-size: 14px

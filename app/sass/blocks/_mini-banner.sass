@@ -1,34 +1,54 @@
 .mini-banner
 	background: $yellow-gradient
 	padding: 55px 0
+	+mq($max-width: 1200px)
+		padding: 30px 0
 	.container
 		position: relative
 	.circles
 		position: absolute
 		z-index: 1
 		right: 0
-		bottom: 0
+		bottom: -55px
 		transform: translate(60%, 0)
+		+mq($max-width: 1200px)
+			transform: translate(0, 0)
 	.percent
 		position: absolute
 		top: 50%
 		left: 0
 		transform: translate(-20%, -50%)
+		+mq($max-width: 1200px)
+			display: none
 	.inner
 		position: relative
 		z-index: 2
 		max-width: 790px
 		width: 100%
 		margin: 0 0 0 auto
+		+mq($max-width: 1200px)
+			margin: 0 auto 0 0
 	&__title
 		text-transform: uppercase
 		font: 800 50px 'Exo', sans-serif
+		+mq($max-width: 800px)
+			font-size: 38px
+		+mq($max-width: 700px)
+			font-size: 32px
+		+mq($max-width: 575px)
+			font-size: 24px
 		span
 			font-size: 36px
+			+mq($max-width: 700px)
+				font-size: 30px
+			+mq($max-width: 575px)
+				font-size: 24px
 	.btn-white
 		position: absolute
 		right: 0
 		bottom: 0
 		transform: translate(0, 20%)
+		+mq($max-width: 800px)
+			position: static
 
 

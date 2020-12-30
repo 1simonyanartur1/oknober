@@ -2,6 +2,8 @@
 	background: $yellow-gradient
 	padding: 80px 0 50px 0
 	position: relative
+	+mq($max-width: 1200px)
+		padding: 35px 0
 	.block-title
 		margin: 0 0 15px 0
 		text-align: center
@@ -18,6 +20,8 @@
 		max-width: 315px
 		width: 100%
 		padding: 30px 0 0 0
+		+mq($max-width: 1000px)
+			margin: 0 auto
 	.form
 		max-width: 270px
 		width: 100%
@@ -29,47 +33,68 @@
 			width: 100%
 		&__btn
 			width: 100%
+	
 	.mocup
 		max-width: 564px
 		width: 100%
 		position: relative
 		z-index: 2
+		+mq($max-width: 1000px)
+			display: none
 	.arrow
 		position: absolute
 		right: 0
 		bottom: 50px
 		z-index: 2
 		transform: translate(0, -100%)
+		+mq($max-width: 1000px)
+			display: none
 	.circles
 		position: absolute
 		left: 0
 		top: 0
+		+mq($max-width: 1000px)
+			display: none
 	.circles2
 		position: absolute
 		right: 0
 		top: -80px
 		z-index: -1
 		transform: translate(50%, 0)
+		+mq($max-width: 1200px)
+			transform: translate(0, 0)
+		+mq($max-width: 1000px)
+			display: none
 	.window1
 		position: absolute
 		left: 0
 		bottom: -50px
 		z-index: -1
 		transform: translate(-10%, 0)
+		+mq($max-width: 1000px)
+			display: none
 	.window2
 		position: absolute
 		right: 0
 		bottom: -50px
 		z-index: -1
 		transform: translate(30%, 0)
+		+mq($max-width: 1200px)
+			transform: translate(0, 0)
+		+mq($max-width: 1000px)
+			display: none
 	.circles3
 		position: absolute
 		left: 50%
 		top: 50%
 		transform: translate(-50%, -50%)
 		z-index: -1
+		+mq($max-width: 1000px)
+			display: none
 	.book
 		display: block
 		width: 100%
+		+mq($max-width: 1000px)
+			display: none
 
 

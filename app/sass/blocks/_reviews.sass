@@ -1,5 +1,7 @@
 .reviews
 	padding: 80px 0 40px
+	+mq($max-width: 1200px)
+		padding: 30px 0
 	.block-title
 		margin: 0 0 36px 0
 		text-align: center
@@ -8,17 +10,28 @@
 	.slider-for
 		max-width: 870px
 		width: 100%
+		+mq($max-width: 1200px)
+			max-width: 75%
+		+mq($max-width: 800px)
+			max-width: 100%
 		.slide
 			border-radius: 4px
 			padding: 30px
 			background: $gray2
 			+flex(row, between, null, wrap)
+			+mq($max-width: 575px)
+				padding: 10px
 			&-left
 				max-width: 340px
 				width: 100%
+				+mq($max-width: 1200px)
+					max-width: 40%
+					padding: 0 15px 0 0
 			&-right
 				max-width: 440px
 				width: 100%
+				+mq($max-width: 1200px)
+					max-width: 60%
 			&__img
 				display: block
 				width: 100%
@@ -26,6 +39,8 @@
 				font-size: 16px
 				line-height: 1.4
 				font-style: italic
+				+mq($max-width: 575px)
+					font-size: 14px
 				&:before,
 				&:after
 					content: ''
@@ -39,16 +54,24 @@
 					+bg(null,null,'icons/quote-right.svg',no-repeat,left,center,contain)
 			.btn-yellow
 				margin: 34px 0 0 0
+				+mq($max-width: 575px)
+					margin: 20px 0 0 0
 		.row
 			margin: 20px 0 0 0
 			+flex(row, null, null, wrap)
 			.block
 				width: 50%
+				+mq($max-width: 1200px)
+					width: 100%
 	.slider-nav
 		max-width: 270px
 		width: 100%
+		+mq($max-width: 1200px)
+			max-width: 24%
+		+mq($max-width: 800px)
+			max-width: 100%
+			margin: 0 0 15px 0
 		.slide
-			// margin: 10px 0
 			padding: 20px
 			border-radius: 4px
 			+trs
@@ -60,11 +83,15 @@
 				display: block
 				width: 70px
 				border-radius: 100%
+				+mq($max-width: 575px)
+					width: 45px
 			&__name
 				margin: 13px 0 0 0
 				text-transform: uppercase
 				font-weight: 700
 				font-size: 16px
+				+mq($max-width: 575px)
+					font-size: 12px
 			&__city
 				margin: 5px 0 0 0
 				font-size: 12px
@@ -77,14 +104,28 @@
 		border-radius: 4px
 		+trs
 		cursor: pointer
+		+mq($max-width: 800px)
+			z-index: 3
+			width: auto
+			position: absolute
+			top: 50%
+			transform: rotate(-90deg) translate(50%, 0)
 		&:hover
 			background: $yellow
 		&-prev
 			margin-bottom: 7px
+			+mq($max-width: 800px)
+				margin: 0
+				left: 0
 		&-next
 			margin-top: 7px
+			+mq($max-width: 800px)
+				margin: 0
+				right: 0
 	.user
 		+flex(row,null,center, wrap)
+		+mq($max-width: 575px)
+			display: none
 		&-inner
 			margin: 0 0 0 20px
 		&__img
@@ -106,22 +147,32 @@
 			padding: 20px 0 15px
 			border-top: 1px solid lighten($dark, 65%)
 			border-bottom: 1px solid lighten($dark, 65%)
+			+mq($max-width: 575px)
+				margin: 0 0 15px 0
+				padding: 0 0 15px 0
+				border-top: none
 		&__title
 			letter-spacing: 0.2em
 			font-size: 9px
 			opacity: 0.7
 			text-transform: uppercase
 			margin: 0 0 6px 0
+			+mq($max-width: 575px)
+				margin: 0 0 8px 0
 		&-list
 			padding-left: 20px
 			li
 				margin: 5px 0
 				list-style-type: disc
 				font-size: 15px
+				+mq($max-width: 575px)
+					font-size: 12px
 				&::marker
 					width: 6px
 					color: $yellow
 	.price
 		font: 800 20px 'Exo', sans-serif
+		+mq($max-width: 575px)
+			font-size: 16px
 
 

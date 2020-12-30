@@ -1,17 +1,32 @@
 .qa
 	padding: 80px 0
+	+mq($max-width: 1200px)
+		padding: 30px 0
 	&.type2
+		padding: 30px 0
 		.ui-tabs-nav
 			max-width: 270px
+			width: 100%
+			+mq($max-width: 800px)
+				max-width: 47%
+			+mq($max-width: 575px)
+				max-width: 100%
 		.tab
 			max-width: 100%
 			width: calc( 100% - 290px )
 			margin: 10px
+			+mq($max-width: 700px)
+				max-width: 50%
+			+mq($max-width: 575px)
+				max-width: 100%
+				width: 100%
 			&:before
 				left: -10px
 			img
 				float: right
 				margin: 0 0 40px 40px
+				+mq($max-width: 1000px)
+					width: 40%
 			.text-container
 				margin: 14px 0 0 0
 	.block-title
@@ -22,6 +37,10 @@
 	.ui-tabs-nav
 		max-width: 370px
 		width: 100%
+		+mq($max-width: 1000px)
+			max-width: 48%
+		+mq($max-width: 575px)
+			max-width: 100%
 		li
 			+trs
 			&:not(:last-child)
@@ -29,7 +48,7 @@
 			&.ui-tabs-active
 				border-bottom: none
 				a
-					background: $tab-gradient
+					background: $yellow-gradient
 					font-weight: 700
 		a
 			color: $dark
@@ -38,6 +57,10 @@
 			display: block
 			background: $gray2
 			padding: 16px 20px
+			+mq($max-width: 800px)
+				line-height: 1.4
+				padding: 10px
+				font-size: 14px
 	.tab
 		max-width: 420px
 		width: 100%
@@ -46,6 +69,13 @@
 		box-shadow: $tab-shadow
 		margin: 10px 10px 10px 0
 		position: relative
+		+mq($max-width: 1000px)
+			max-width: 50%
+		+mq($max-width: 800px)
+			padding: 10px
+		+mq($max-width: 575px)
+			max-width: 100%
+			margin: 0
 		&:before
 			content: ''
 			display: block
@@ -57,10 +87,14 @@
 			bottom: -10px
 			left: 0
 			background: $gray2
+			+mq($max-width: 575px)
+				display: none
 		&__title
 			text-transform: uppercase
 			color: $yellow
 			font: 800 24px/1.5 'Exo', sans-serif
+			+mq($max-width: 800px)
+				font-size: 20px
 		&__text
 			font-size: 16px
 			margin: 14px 0 0 0
@@ -69,9 +103,13 @@
 		position: absolute
 		right: -50px
 		bottom: 0
+		+mq($max-width: 1200px)
+			display: none
 	.img
 		max-width: 370px
 		width: 100%
+		+mq($max-width: 1200px)
+			display: none
 
 
 

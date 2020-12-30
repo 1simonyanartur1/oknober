@@ -1,0 +1,32 @@
+.fixed-links
+	position: fixed
+	z-index: 10
+	right: 0
+	top: 25%
+	+trs
+	+mq($max-width: 1200px)
+		display: none
+	&.enter
+		transform: translate(85%, 0)
+	&-link
+		width: 108px
+		height: 80px
+		background: $dark
+		+flex(column, center, center, nowrap)
+		text-align: center
+		color: white
+		text-transform: uppercase
+		&:hover
+			.fixed-links-link__text
+				color: $yellow
+		&:first-child
+			border-radius: 4px 0 0 0
+		&:last-child
+			border-radius: 0 0 0 4px
+		&__icon
+			display: block
+			height: 32px
+		&__text
+			font: 800 12px/1 'Exo', sans-serif
+			margin: 6px 0 0 0
+			+trs

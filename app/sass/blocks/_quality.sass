@@ -5,6 +5,10 @@
 		font-size: 30px
 		text-align: center
 		margin: 0 0 30px 0
+		+mq($max-width: 1200px)
+			font-size: 28px
+		+mq($max-width: 700px)
+			font-size: 20px
 	.inner
 		position: relative
 	.man
@@ -14,6 +18,8 @@
 		transform: translate(-50%, 0)
 		display: block
 		z-index: 2
+		+mq($max-width: 1200px)
+			display: none
 	.circles
 		position: absolute
 		top: 50%
@@ -21,10 +27,20 @@
 		transform: translate(-50%, -50%)
 	.items
 		+flex(row, between, null, wrap)
+		+mq($max-width: 1200px)
+			justify-content: center
+			align-items: flex-start
 	.item
 		+flex(row, center, center, wrap)
 		width: 50%
 		margin: 0 0 50px 0
+		+mq($max-width: 1200px)
+			transform: translate(0,0) !important
+		+mq($max-width: 800px)
+			text-align: center !important
+		+mq($max-width: 575px)
+			width: 48%
+			margin: 3% 1%
 		&:nth-child(even)
 			.item-inner
 				margin-left: 15px
@@ -52,16 +68,24 @@
 			transform: translate(10%, 0)
 			margin: 0
 		&-icon
-			background: $yellow-gradient2
+			background: $yellow-gradient
 			width: 70px
 			height: 70px
 			border-radius: 100%
 			+flex(row, center, center, wrap)
+			+mq($max-width: 800px)
+				margin: 0 0 15px 0
 		&-inner
 			max-width: 285px
 			width: 100%
+			+mq($max-width: 800px)
+				margin: 0 !important
 		&__title
 			font-weight: 700
 			font-size: 20px
+			+mq($max-width: 575px)
+				font-size: 14px
 		&__text
 			line-height: 1.4
+			+mq($max-width: 575px)
+				font-size: 12px

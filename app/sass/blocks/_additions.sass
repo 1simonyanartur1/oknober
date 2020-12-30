@@ -1,6 +1,8 @@
 .additions
 	padding: 40px 0 90px 0
 	position: relative
+	+mq($max-width: 1200px)
+		padding: 30px 0 60px
 	&:before
 		content: ''
 		display: block
@@ -23,7 +25,10 @@
 				color: $yellow
 		&__img
 			display: block
-			width: 154px
+			max-width: 154px
+			width: 100%
+			+mq($max-width: 700px)
+				max-width: 90%
 		&__text
 			+trs
 			margin: 10px 0 0 0
@@ -32,9 +37,14 @@
 			text-transform: uppercase
 			color: $dark
 	.arrow
+		z-index: 3
 		top: 50%
 		transform: translate(0, -50%)
 		&-prev
 			left: -30px
+			+mq($max-width: 1200px)
+				left: 0
 		&-next
 			right: -30px
+			+mq($max-width: 1200px)
+				right: 0

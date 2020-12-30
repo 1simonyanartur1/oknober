@@ -1,0 +1,551 @@
+.quiz
+	padding: 10px 0 30px
+	.top
+		margin: 0 0 30px 0
+		+flex(row, between, center, wrap)
+		&__title
+			font-weight: 500
+			font-size: 20px
+			margin: 0 0 15px 0
+		&-right
+			max-width: 571px
+			width: 100%
+			+mq($max-width: 1200px)
+				max-width: 50%
+			+mq($max-width: 1000px)
+				display: none
+	.bottom
+		padding: 10px
+		border-radius: 4px
+		+flex(row, between, null, wrap)
+		background: $gray2
+		&-right
+			width: 100%
+			max-width: 260px
+			margin: -10px 0
+			+mq($max-width: 1200px)
+				max-width: 30%
+				&.finish
+					display: none
+			+mq($max-width: 1000px)
+				max-width: 100%
+			.slick-list,
+			.slick-track
+				height: 100%
+			&-slide
+				position: relative
+				padding: 40px 20px 40px 30px
+				+flex(column, between, start, wrap)
+				+mq($max-width: 1000px)
+					padding: 20px 10px
+			.girl
+				position: absolute
+				width: 100%
+				bottom: 0
+				right: 0
+				+mq($max-width: 1200px)
+					display: none
+		&__title
+			opacity: .5
+			font-size: 16px
+			line-height: 1.3
+			+mq($max-width: 1000px)
+				margin: 0 0 15px 0
+	.items
+		+flex(row, between, null, wrap)
+	.item
+		max-width: 285px
+		width: 100%
+		+flex(row, null, center, wrap)
+		+mq($max-width: 1200px)
+			flex-direction: column
+			align-items: flex-start
+			width: 50%
+		&-icon
+			border-radius: 100%
+			+flex(row, center, center, nowrap)
+			width: 70px
+			height: 70px
+			background: $yellow-gradient
+		&__text
+			line-height: 1.4
+			max-width: 205px
+			width: 100%
+			margin: 0 0 0 10px
+	.slider
+		max-width: 890px
+		width: 100%
+		border-radius: 4px
+		box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1)
+		background: white
+		+mq($max-width: 1200px)
+			max-width: 70%
+		+mq($max-width: 1000px)
+			max-width: 100%
+		&.finish
+			box-shadow: none
+			background: none
+			+mq($max-width: 1200px)
+				max-width: 100%
+				.slide
+					min-height: 445px
+					+mq($max-width: 575px)
+						min-height: 300px
+
+	.slide
+		padding: 24px 20px
+		background: white
+		+flex(column, between, start, nowrap)
+		min-height: 445px
+		+mq($max-width: 1200px)
+			min-height: 680px
+		+mq($max-width: 1000px)
+			padding: 10px
+		&:last-child
+			background: none
+			+flex(row, start, null, wrap)
+		&__step
+			font-size: 12px
+			font-weight: 700
+			text-transform: uppercase
+			opacity: .3
+		&__title
+			font: 800 30px/1.3 'Exo', sans-serif
+			text-transform: uppercase
+			+mq($max-width: 700px)
+				font-size: 24px
+			+mq($max-width: 575px)
+				font-size: 18px
+		&-btns
+			+flex(row, start, center, wrap)
+			margin: 30px 0 0 0
+			li
+				&:not(:last-child)
+					margin: 0 20px 0 0
+			a
+				padding: 20px 25px
+				&.disabled
+					pointer-events: none
+					background: $gray2
+					color: white
+		&-inner
+			width: 100%
+			margin: 0 0 auto -10px
+			+flex(row, start, end, wrap)
+			+mq($max-width: 575px)
+				margin: 0 0 auto 0
+	.present
+		background: $yellow-gradient
+		border-radius: 4px
+		padding: 30px 20px
+		position: relative
+		overflow: hidden
+		width: 100%
+		&:before
+			content: ''
+			display: block
+			width: 106px
+			height: 106px
+			border-radius: 100%
+			background: white
+			position: absolute
+			right: 0
+			top: 0
+			transform: translate(25%, -25%)
+		&__icon
+			display: block
+			width: 37px
+			position: absolute
+			right: 20px
+			top: 20px
+		&__title
+			text-transform: uppercase
+			font: 800 18px 'Exo', sans-serif
+			position: relative
+			z-index: 2
+		&__text
+			margin: 7px 0 0 0
+			position: relative
+			z-index: 2
+	.block-title
+		line-height: 1.4
+		margin: 0
+		+mq($max-width: 1200px)
+			max-width: 50%
+			width: 100%
+		+mq($max-width: 1000px)
+			max-width: 100%
+
+	.big-radio
+		max-width: 150px
+		width: 100%
+		position: relative
+		cursor: pointer
+		margin: 10px
+		+mq($max-width: 575px)
+			max-width: 48%
+			margin: 1%
+		&:hover
+			.big-radio__img
+				opacity: .5
+		&__img
+			display: block
+			border-radius: 4px
+			padding: 5px
+			background: $gray2
+			+trs
+			width: 100%
+		.big-radio__input:checked ~ .big-radio__text:before
+			+bg(null, $yellow, '../img/icons/check2.svg', no-repeat, center, center, auto)
+		&__input
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			cursor: pointer
+			z-index: 2
+		&__text
+			font-weight: 600
+			font-size: 16px
+			text-align: center
+			padding: 10px 0
+			+mq($max-width: 575px)
+				font-size: 12px
+			&:before
+				z-index: 2
+				content: ''
+				display: block
+				width: 30px
+				height: 30px
+				border-radius: 100%
+				border: 3px solid white
+				background: $gray2
+				position: absolute
+				left: 50%
+				bottom: 0
+				transform: translate(-50%, 50%)
+			span
+				display: block
+				width: 100%
+				font-weight: 400
+
+	.small-radio
+		max-width: 255px
+		width: 100%
+		margin: 10px
+		position: relative
+		padding: 15px 20px
+		background: $gray2
+		border-radius: 4px
+		cursor: pointer
+		+flex(row, start, center, wrap)
+		+mq($max-width: 700px)
+			max-width: 46%
+			margin: 2%
+		+mq($max-width: 575px)
+			padding: 7px
+		.small-radio__input:checked ~ .small-radio__text span
+			color: white
+		.small-radio__input:checked ~ .small-radio__text:before
+			+bg(null, white, '../img/icons/check2.svg', no-repeat, center, center, auto)
+		.small-radio__input:checked ~ .small-radio__text:after
+			opacity: 1
+		&__input
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			cursor: pointer
+			z-index: 2
+		&__text
+			+flex(row, start, center, wrap)
+			font-size: 14px
+			line-height: 1
+			+mq($max-width: 575px)
+				flex-direction: column
+				align-items: flex-start
+			span
+				color: $dark
+				position: relative
+				z-index: 2
+				width: calc( 100% - 48px )
+				+mq($max-width: 575px)
+					width: 100%
+			&:before
+				z-index: 2
+				content: ''
+				display: inline-block
+				margin: 0 16px 0 0
+				width: 30px
+				height: 30px
+				border-radius: 4px
+				border: 1px solid lighten($dark, 65%)
+				background: white
+				+mq($max-width: 575px)
+					margin: 0 0 5px 0
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				background: $dark
+				opacity: 0
+				border-radius: 4px
+				+trs
+		&-tooltip
+			width: 30px
+			height: 30px
+			border-radius: 100%
+			background: $yellow
+			border: 2px solid white
+			right: 0
+			top: 50%
+			position: absolute
+			transform: translate(50%, -50%)
+			+bg(null, $yellow, 'quiz/i.svg', no-repeat, center, center, auto)
+			+mq($max-width: 1200px)
+				display: none
+			&:hover
+				&:after
+					display: block
+				.small-radio-tooltip__img
+					display: block
+			&:after
+				+triangle(down, 15px, white)
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translate(-50%, -10%)
+				display: none
+			&__img
+				position: absolute
+				width: 210px
+				padding: 5px
+				border-radius: 4px
+				background: white
+				display: none
+				top: 0
+				left: 0
+				transform: translate(-50%, -100%)
+
+	.window-counter-wrap
+		margin: 20px
+		max-width: 450px
+		width: 100%
+		padding: 0 45px
+		position: relative
+	.window-counter__text
+		text-transform: uppercase
+		font-weight: 800
+		font-size: 24px
+		position: absolute
+		bottom: -10px
+		opacity: .5
+		&:first-child
+			left: 0
+		&:last-child
+			right: 0
+	.window-counter
+		width: 100%
+		position: relative
+		margin: 130px 0 0 0
+		&__handler
+			cursor: pointer
+			position: absolute
+			width: 80px
+			height: 50px
+			border-radius: 4px
+			background: $gray2
+			border: 1px solid lighten($dark, 65%)
+			+flex(row, center, center, nowrap)
+			font-weight: 600
+			font-size: 24px
+			color: lighten($dark, 45%)
+			transform: translate(-50%, -165%)
+			z-index: 3
+			&:hover
+				&:after
+					background: $dark
+			&:after
+				content: ''
+				display: block
+				width: 21px
+				height: 21px
+				border-radius: 100%
+				border: 2px solid white
+				background: $yellow
+				+trs
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translate(-50%, 200%)
+	.ui-widget-content
+		border: none
+		background: $gray2
+		border-radius: 4px
+		height: 10px
+	.ui-widget-header
+		background: $yellow
+		border: none
+		position: absolute
+		display: block
+		height: 100%
+		top: 0
+		border-radius: 4px
+
+	.money
+		max-width: 700px
+		width: 100%
+		margin: 20px
+		+mq($max-width: 800px)
+			max-width: 100%
+		&-label
+			+flex(row,start,center,nowrap)
+			margin-bottom: 30px
+			span
+				font-size: 24px
+				font-weight: 700
+				opacity: .5
+		&__input
+			width: 150px
+			height: 50px
+			border: 1px solid lighten($dark, 55%)
+			text-align: center
+			font-size: 21px
+			color: lighten($dark, 45%)
+			font-weight: 700
+			margin: 0 12px
+			padding: 0 10px
+			background: $gray2
+			border-radius: 4px
+			+mq($max-width: 575px)
+				width: 130px
+				height: 35px
+				font-size: 17px
+		&-slider
+			max-width: 100%
+			width: 100%
+			margin: 0 35px
+			position: relative
+			+mq($max-width: 575px)
+				margin: 0
+		.ui-slider-handle
+			position: absolute
+			background: $yellow
+			width: 21px
+			height: 21px
+			border-radius: 100%
+			border: 2px solid white
+			top: 50%
+			transform: translate(0, -50%)
+			cursor: pointer
+			transition: background .3s ease
+			&:hover
+				background: $dark
+		&-line
+			width: 100%
+			+flex(row, between, center, nowrap)
+			+mq($max-width: 575px)
+				flex-wrap: wrap
+			&.type2
+				padding: 0 50px 0 0
+				+mq($max-width: 700px)
+					padding: 0
+		&__min,
+		&__max
+			text-transform: uppercase
+			font-weight: 800
+			font-size: 24px
+			bottom: -5px
+			opacity: .5
+			word-wrap: none
+			word-break: none
+			white-space: nowrap
+			+mq($max-width: 575px)
+				display: none
+
+	.thanks-banner
+		box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1)
+		border-radius: 4px
+		padding: 40px 28px
+		background: white
+		max-width: 400px
+		width: 100%
+		+mq($max-width: 1200px)
+			max-width: 50%
+		+mq($max-width: 1000px)
+			max-width: 100%
+			padding: 15px
+		+mq($max-width: 575px)
+			display: none
+		&__text
+			font: 600 18px/1 'Exo', sans-serif
+		&__title
+			text-transform: uppercase
+			margin: 1px 0 15px 0
+			font: 800 24px/1 'Exo', sans-serif
+		&-item
+			margin: 0 0 15px 0
+			+flex(row, null, center, wrap)
+			+mq($max-width: 1000px)
+				display: inline-flex
+				flex-direction: column
+				align-items: flex-start
+				margin: 1%
+				width: 30%
+			&-icon
+				width: 70px
+				height: 70px
+				border-radius: 100%
+				+flex(row, center, center, wrap)
+				background: $gray2
+				+mq($max-width: 1000px)
+					margin: 0 0 5px 0
+			&__text
+				max-width: 256px
+				width: 100%
+				margin: 0 0 0 15px
+				font-size: 14px
+				+mq($max-width: 1000px)
+					margin: 0
+
+	.form-wrap
+		max-width: 440px
+		width: 100%
+		padding: 0 30px
+		+mq($max-width: 1200px)
+			max-width: 50%
+		+mq($max-width: 1000px)
+			max-width: 100%
+			padding: 15px 0
+	.form-title
+		color: $dark
+		text-transform: uppercase
+		margin: 1px 0 15px 0
+		font: 800 24px/1 'Exo', sans-serif
+	.form-subtitle
+		margin: 1px 0 15px 0
+		font-size: 14px
+	.form
+		max-width: 300px
+		width: 100%
+		text-align: center
+		&-action
+			margin: 15px 0
+		&-item
+			width: 100%
+		&__input
+			width: 100%
+		&__btn
+			padding: 25px 5px
+			width: 100%
+	
+
+
+

@@ -1,4 +1,7 @@
 // main page elements
+html
+	// overflow: hidden
+	// overflow-x: hidden
 body
 	font-size: 16px
 	color: $dark
@@ -20,12 +23,14 @@ body
 	width: 100%
 	padding: 0
 	margin: 0 auto
+	+mq($max-width: 1200px)
+		padding: 0 15px
 
 // duplicate blocks
 .seo
 	padding: 45px 0
 	+mq($max-width: 1000px)
-	padding: 30px 0
+		padding: 30px 0
 	
 .no-page
 	margin: 150px 0
@@ -33,7 +38,7 @@ body
 		max-width: 350px
 
 .block-label
-	background: $label-bg
+	background: $yellow-gradient
 	margin: 0 0 11px 0
 	padding: 10px 20px
 	font-weight: 500
@@ -43,10 +48,20 @@ body
 	font: 800 36px/1.5 'Exo', sans-serif
 	margin: 0 0 30px 0
 	text-transform: uppercase
+	+mq($max-width: 1200px)
+		font-size: 28px
+	+mq($max-width: 700px)
+		font-size: 24px
+	+mq($max-width: 575px)
+		margin: 0 0 15px 0
+		line-height: 1.2
+		font-size: 20px
 .block-text
 	color: $dark
 	font-size: 16px
 	line-height: 1.5
+	+mq($max-width: 700px)
+		font-size: 14px
 
 
 .btn-dark
@@ -86,7 +101,7 @@ body
 .btn-yellow
 	border-radius: 4px
 	padding: 25px 40px
-	background: $btn-yellow-gradient
+	background: $yellow-gradient
 	color: $dark
 	font: 800 14px/.45 'Exo', sans-serif
 	text-transform: uppercase

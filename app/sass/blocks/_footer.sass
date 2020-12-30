@@ -5,6 +5,11 @@
 		+flex(row, between, start, wrap)
 	.column
 		width: 24%
+		+mq($max-width: 1000px)
+			width: 31%
+			margin: 1%
+		+mq($max-width: 575px)
+			width: 48%
 	.menu-list
 		margin: 0 0 32px 0
 		li
@@ -17,6 +22,8 @@
 			font-size: 16px
 			line-height: 1.5
 			color: $dark
+			+mq($max-width: 575px)
+				font-size: 14px
 			&:hover
 				color: $yellow
 	.bottom
@@ -34,6 +41,20 @@
 			left: 50%
 			top: 0
 			transform: translate(-50%,0)
+	.left
+		+mq($max-width: 1200px)
+			order: -2
+		+mq($max-width: 575px)
+			margin: 0 auto
+			text-align: center
+	.center
+		+mq($max-width: 1200px)
+			width: 100%
+	.right
+		+mq($max-width: 1200px)
+			order: -1
+		+mq($max-width: 575px)
+			margin: 15px auto
 	.infotext
 		font: 500 12px 'Exo', sans-serif
 		color: $dark
@@ -43,6 +64,10 @@
 		width: 137px
 		height: auto
 		margin: 48px 0 0 0
+		+mq($max-width: 1200px)
+			margin: 20px 0 0 0
+		+mq($max-width: 575px)
+			margin: 15px auto
 	.payment
 		width: 100%
 		+flex(row, center, center, wrap)
@@ -51,9 +76,13 @@
 			margin: 5px 9px
 	.tels
 		margin: 57px 0 0 0
+		+mq($max-width: 1200px)
+			margin: 25px 0 0 0
 	.text
+		opacity: .7
 		color: $dark
 		text-align: center
+		font-size: 14px
 		b
 			font-size: 16px
 			font-weight: 500

@@ -12,14 +12,23 @@
 	box-shadow: 0px 4px 30px rgba(51, 51, 51, 0.2)
 	+trs
 	cursor: pointer
+	+mq($max-width: 575px)
+		max-width: 300px
 	&.mini
 		width: auto
 		padding: 0
 		border-radius: 100%
+		+mq($max-width: 575px)
+			.consult-icon
+				display: block
 		.consult-inner
 			display: none
 		.consult__close
 			display: none
+		+mq($max-width: 1500px)
+			opacity: .7
+			&:hover
+				opacity: 1
 	&__close
 		position: absolute
 		right: 22px
@@ -43,6 +52,8 @@
 		width: 90px
 		background: white
 		position: relative
+		+mq($max-width: 575px)
+			display: none
 		&:before
 			content: ''
 			display: block
@@ -64,6 +75,10 @@
 		margin: 17px 0 0 30px
 		max-width: 222px
 		width: 100%
+		+mq($max-width: 575px)
+			max-width: 100%
+			padding: 0
+			margin: 0
 	&__title
 		font: 700 20px/1 'Exo', sans-serif
 	&__text

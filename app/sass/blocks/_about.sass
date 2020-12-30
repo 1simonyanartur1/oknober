@@ -1,5 +1,7 @@
 .about
 	padding: 80px 0 20px 0
+	+mq($max-width: 1200px)
+		padding: 30px 0
 	.container
 		+flex(row, null, end, wrap)
 	.line
@@ -10,17 +12,28 @@
 			background: $gray-gradient3
 			.text-container
 				padding: 0 0 0 30px
+				+mq($max-width: 1000px)
+					padding: 0
+			img
+				+mq($max-width: 1000px)
+					display: none
 	.text-container
 		padding: 30px 0
+		width: calc( 100% - 444px )
+		+mq($max-width: 1000px)
+			width: 100%
+			padding: 0
 		ul
 			+flex(row, between, start, wrap)
+			+mq($max-width: 575px)
+				display: block
 			li
 				width: 45%
 				padding: 5px 10px 5px 0
+				+mq($max-width: 575px)
+					width: 100%
 	.img
 		display: block
 		max-width: 444px
 		width: 100%
 		height: auto
-	.text-container
-		width: calc( 100% - 444px )
