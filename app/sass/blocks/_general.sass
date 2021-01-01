@@ -25,6 +25,8 @@ body
 	margin: 0 auto
 	+mq($max-width: 1200px)
 		padding: 0 15px
+	+mq($max-width: 575px)
+		padding: 0 10px
 
 // duplicate blocks
 .seo
@@ -109,6 +111,8 @@ body
 	border: 2px solid transparent
 	text-align: center
 	cursor: pointer
+	+mq($max-width: 575px)
+		padding: 15px 20px
 	&:hover
 		border-color: $yellow
 		background: white

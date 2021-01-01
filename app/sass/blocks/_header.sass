@@ -11,19 +11,22 @@
 		background: $gray2
 		z-index: -3
 	&-top
+		width: 100%
 		padding: 24px 0
+		+mq($max-width: 1200px)
+			padding: 10px 0
 		.container
 			+flex(row, between, center, wrap)
 	&-bottom
-		.container
-			box-shadow: $tab-shadow
-			border-radius: 4px 0 0 4px
-			background: white
-			+flex(row, between, null, wrap)
+		width: 100%
 	.logo
+		+mq($max-width: 575px)
+			width: 110px
 		&__title
 			font: 800 20px/1 'Exo', sans-serif
 			color: $dark
+			+mq($max-width: 700px)
+				font-size: 14px
 			span
 				color: $yellow
 		&__text
@@ -31,14 +34,25 @@
 			margin: 9px 0 0 0
 			letter-spacing: 0.01em
 			color: $gray
+			+mq($max-width: 700px)
+				font-size: 10px
+				margin: 5px 0 0
+			+mq($max-width: 575px)
+				font-size: 9px
 	.top-nav
 		+flex(row, between, center, wrap)
+		+mq($max-width: 575px)
+			flex-direction: column
 		li
 			margin: 0 10px
+			+mq($max-width: 575px)
+				margin: 0 5px
 		a
 			color: $dark
 			text-transform: uppercase
 			font: 700 14px/1 'Exo', sans-serif
+			+mq($max-width: 575px)
+				font-size: 12px
 			&:hover
 				color: $yellow
 	.price-link
@@ -46,10 +60,25 @@
 		font: 500 14px/1.2 'Exo', sans-serif
 		color: $dark
 		text-decoration: underline
+		+mq($max-width: 700px)
+			margin: 0
+		+mq($max-width: 575px)
+			font-size: 12px
+			flex-direction: column
+			align-items: center
+			text-align: center
+		+mq($max-width: 400px)
+			margin: 0 0 0 10px
 		&:hover
 			color: $yellow
+		img
+			+mq($max-width: 575px)
+				display: block
+				width: 30px
 		span
 			margin: 0 0 0 10px
+			+mq($max-width: 575px)
+				margin: 0
 	.measure-link
 		background: white
 		color: $dark
@@ -62,12 +91,31 @@
 		box-sizing: border-box
 		box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1)
 		margin: 0 20px 0 0
+		+mq($max-width: 1200px)
+			margin: 0
+		+mq($max-width: 1000px)
+			margin: 10px 0 0
+		+mq($max-width: 700px)
+			margin: 0 0 0 10px
+			font-size: 12px
+		+mq($max-width: 575px)
+			flex-direction: column
+			align-items: center
+			text-align: center
+			font-size: 10px
+			padding: 5px
+		+mq($max-width: 400px)
+			margin: 0
 		&:hover
 			color: $yellow
 		span
 			margin: 0 0 0 10px
+			+mq($max-width: 575px)
+				margin: 0
 	.block
 		text-align: right
+		+mq($max-width: 1200px)
+			margin: 0 0 0 auto
 		&__title
 			color: $gray
 			font-size: 12px
@@ -87,10 +135,16 @@
 				left: -30px
 				top: 50%
 				transform: translate(0, -50%)
+				+mq($max-width: 700px)
+					left: 0
 		a
 			font: 800 24px/1 'Exo', sans-serif
 			letter-spacing: 0.01em
 			color: $dark
+			+mq($max-width: 1000px)
+				font-size: 20px
+			+mq($max-width: 700px)
+				font-size: 18px
 			&:hover
 				color: $yellow
 	.callback-link
@@ -100,28 +154,155 @@
 		font: 400 14px/1 'Exo', sans-serif
 		&:hover
 			color: $yellow
-	.menu
-		padding: 0
-		+flex(row, null, center, wrap)
-		li
-			list-style-type: none
+	.main-nav
+		+mq($min-width: 320px)
+			+flex(row-reverse, between, center, wrap)
 			position: relative
-			&:not(:last-child)
+			flex-direction: row-reverse
+			align-items: center
+			padding: 0 12px 0 0
+			width: 100%
+			box-shadow: $tab-shadow
+			border-radius: 4px 0 0 4px
+			background: white
+		+mq($min-width: 1200px)
+			padding: 0
+			+flex(row, between, null, wrap)
+	#main-menu-state:not(:checked) ~ #main-menu
+		display: none
+	#main-menu-state:checked ~ #main-menu
+		+flex(row, null, center, wrap)
+	#main-menu
+		+mq($min-width: 320px)
+			padding: 0
+			position: absolute
+			left: 0
+			top: 100%
+			width: 100%
+			border-radius: 0
+		+mq($min-width: 1200px)
+			+flex(row, null, center, wrap)
+			margin: 0
+			padding: 0
+			border-radius: 0
+			border: none
+			background: none
+			box-shadow: none
+			width: auto
+			position: static
+		ul
+			+mq($min-width: 320px)
+				margin: 0
+				padding: 0
+				border-radius: 0
+				border: none
+				background: none
+				box-shadow: none
+				line-height: 1
+				opacity: 1
+				&:before,
 				&:after
+					display: none
+		li
+			+mq($min-width: 1200px)
+				margin: 0
+				border-radius: 0
+				padding: 0
+				border: none
+				background: none
+				box-shadow: none
+				line-height: 1
+				opacity: 1
+				&:before,
+				&:after
+					display: none
+		a
+			+mq($min-width: 1200px)
+				background: none
+				margin: 0
+				border-radius: 0
+				padding: 0
+				border: none
+				box-shadow: none
+				line-height: 1
+				opacity: 1
+				color: black
+			&.has-submenu
+				position: relative
+				&[aria-expanded="true"]
+					.sub-arrow
+						&:before
+							content: '-'
+		.sub-arrow
+			+mq($min-width: 1200px)
+				display: none
+			+mq($min-width: 320px)
+				width: 30px
+				height: 30px
+				top: 50%
+				right: 10px
+				transform: translate(0, -50%)
+				border: 1px solid $dark
+				position: absolute
+				margin: 0
+				z-index: 2
+				&:before
+					content: '+'
+					display: block
+					font-size: 15px
+					line-height: 28px
+		ul
+			background: white
+			border-radius: 0 !important
+			min-width: 100% !important
+			+mq($min-width: 320px)
+				position: static
+			+mq($min-width: 1200px)
+				position: absolute
+			& > li
+				& > a
+					padding: 10px 5px
+					font: 400 14px 'Exo', sans-serif
+					color: $dark
+					+mq($min-width: 320px)
+						padding: 10px 30px
+					&:hover
+						background: $yellow
+						color: white
+		& > li
+			position: relative
+			+mq($min-width: 320px)
+				width: 100%
+			&:first-child
+				& > a
+					border-radius: 4px 0 0 4px !important
+			&:last-child
+				&:before
+					display: none
+			&:before
+				+mq($min-width: 320px)
+					display: none
+				+mq($min-width: 1200px)
+					z-index: 1
 					content: ''
+					display: block
+					width: 1px
 					height: 80%
+					position: absolute
 					top: 10%
 					right: 0
-					position: absolute
-					width: 1px
 					background: rgba(51, 51, 51, 0.1)
-		a
-			padding: 22px 30px
-			text-transform: uppercase
-			color: $dark
-			font: 800 16px/1 'Exo', sans-serif
-			&:hover
-				color: white
-				background: $yellow
+			& > a
+				padding: 20px 45px 20px 30px
+				background: white
+				font: 800 16px 'Exo', sans-serif
+				text-transform: uppercase
+				color: $dark
+				+mq($max-width: 575px)
+					padding: 10px 45px 10px 10px
+				&:hover
+					+mq($min-width: 1200px)
+						background: $yellow
+						color: white
 
 

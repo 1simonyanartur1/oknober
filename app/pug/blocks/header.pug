@@ -1,7 +1,7 @@
 header.header
 	.header-top
 		.container
-			a.logo(href="index.html")
+			a.logo(href="#")
 				.logo__title Оконный рай 
 					span в москве
 				.logo__text Дочернее предприятие ОкноБер
@@ -26,18 +26,69 @@ header.header
 				a.callback-link(href="#") Заказать бесплатный звонок
 	.header-bottom
 		.container
-			.menu
-				li
-					a(href="#") главная
-				li
-					a(href="#") О компании
-				li
-					a(href="#") Окна
-				li
-					a(href="#") Двери
-				li
-					a(href="#") Балконы
-				li
-					a(href="#") Цены
-			a.calc-link.btn-yellow(href="#") рассчитать окно
+			nav.main-nav
+				input#main-menu-state(type="checkbox")
+				label.main-menu-btn(for="main-menu-state")
+					span.main-menu-btn-icon
+				ul#main-menu.sm.sm-clean
+					li
+						a(href="#") Главная
+					li
+						a(href="#") О компании
+						ul
+							li
+								a(href="#") Отзывы
+							li
+								a(href="#") Статьи
+							li
+								a(href="#") Сотрудничество
+							li
+								a(href="#") Акции
+							li
+								a(href="#") Калькулятор
+					li
+						a(href="#") Окна
+						ul
+							li
+								a(href="#") Пластиковые окна
+							li
+								a(href="#") Окна Rehau
+							li
+								a(href="#") Алюминиевые окна
+							li
+								a(href="#") Остекление квартир
+							li
+								a(href="#") Остекление домов и коттеджей
+							li
+								a(href="#") Остекление веранд и террас
+					li
+						a(href="#") Двери
+						ul
+							li
+								a(href="#") Пластиковые двери
+							li
+								a(href="#") Алюминиевые двери
+							li
+								a(href="#") Раздвижные двери (порталы)
+					li
+						a(href="#") Балконы
+						ul
+							li
+								a(href="#") Остекление балконов
+							li
+								a(href="#") Холодное остекление
+							li
+								a(href="#") Теплое остекление
+							li
+								a(href="#") Ремонт балконов
+							li
+								a(href="#") Отделка балконов
+					li
+						a(href="#") Цены
+						ul
+							li
+								a(href="#") Скачать прайс-лист
+					li
+						a(href="#") Контакты
+				a.calc-link.btn-yellow(href="#") рассчитать окно
 
