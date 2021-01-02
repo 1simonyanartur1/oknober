@@ -13,13 +13,13 @@
 				// $('.header').removeClass('scroll');
 				$('.header').removeClass('show');
 			}
-			if ($st > 1000) {
-				// Down
-				$('.header').addClass('show');
-			}
+			// if ($st > 1000) {
+			// 	// Down
+			// 	$('.header').addClass('show');
+			// }
 			if ($st < 500) {
 				$('.header').removeClass('scroll');
-				$('.header').removeClass('show');
+				// $('.header').removeClass('show');
 			}
 			$scrollPos = $st;
 		});
