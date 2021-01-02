@@ -1,6 +1,35 @@
 (function ($) {
 	$(document).ready(function () {
 
+		var $scrollPos = 0;
+		var $st = $(this).scrollTop();
+		$(window).scroll(function () {
+			var $st = $(this).scrollTop();
+			if ($st > 500) {
+				// Down
+				$('.header').addClass('scroll');
+			} else {
+				// Up
+				// $('.header').removeClass('scroll');
+				$('.header').removeClass('show');
+			}
+			if ($st > 1000) {
+				// Down
+				$('.header').addClass('show');
+			}
+			if ($st < 500) {
+				$('.header').removeClass('scroll');
+				$('.header').removeClass('show');
+			}
+			$scrollPos = $st;
+		});
+		
+		$scrollPos = $st;
+		if($scrollPos > 0) {
+			$('.header').addClass('scroll');
+			$('.header').addClass('show');
+		}
+
 		// SmartMenus init
 		$(function () {
 			$('#main-menu').smartmenus({

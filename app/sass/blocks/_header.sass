@@ -1,5 +1,27 @@
 .header
 	position: relative
+	&.scroll
+		.header-bottom
+			height: 60px
+		.main-nav
+			z-index: 99
+			position: fixed
+			left: 0
+			top: -150px
+			background: white
+			padding: 5px 10px
+			box-shadow: $tab-shadow
+			.main-nav
+				box-shadow: none
+		#main-menu
+			& > li
+				& > a
+					padding: 15px
+		.btn-yellow
+			padding: 15px
+	&.show
+		.main-nav
+			top: 0
 	&:before
 		content: ''
 		display: block
@@ -165,13 +187,16 @@
 			box-shadow: $tab-shadow
 			border-radius: 4px 0 0 4px
 			background: white
+			+trs
 		+mq($min-width: 1200px)
 			padding: 0
 			+flex(row, between, null, wrap)
 	#main-menu-state:not(:checked) ~ #main-menu
-		display: none
+		+mq($max-width: 1200px)
+			display: none
 	#main-menu-state:checked ~ #main-menu
-		+flex(row, null, center, wrap)
+		+mq($max-width: 1200px)
+			+flex(row, null, center, wrap)
 	#main-menu
 		+mq($min-width: 320px)
 			padding: 0
@@ -273,6 +298,8 @@
 			position: relative
 			+mq($min-width: 320px)
 				width: 100%
+			+mq($min-width: 1200px)
+				width: auto
 			&:first-child
 				& > a
 					border-radius: 4px 0 0 4px !important
@@ -293,11 +320,13 @@
 					right: 0
 					background: rgba(51, 51, 51, 0.1)
 			& > a
-				padding: 20px 45px 20px 30px
+				padding: 20px 30px
 				background: white
 				font: 800 16px 'Exo', sans-serif
 				text-transform: uppercase
 				color: $dark
+				+mq($max-width: 1200px)
+					padding: 20px 45px 20px 30px
 				+mq($max-width: 575px)
 					padding: 10px 45px 10px 10px
 				&:hover
