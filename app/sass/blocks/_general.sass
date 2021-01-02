@@ -9,7 +9,7 @@ body
 	font-weight: 400
 	background: white
 	overflow-x: hidden
-	// +scrollbar(10px, auto, $logo-blue, $footer-gray, white)
+	+scrollbar(10px, auto, $yellow, $gray2, $dark, null)
 
 .page-container
 	max-width: 1920px
@@ -28,12 +28,11 @@ body
 	+mq($max-width: 575px)
 		padding: 0 10px
 
-// duplicate blocks
 .seo
 	padding: 45px 0
 	+mq($max-width: 1000px)
 		padding: 30px 0
-	
+
 .no-page
 	margin: 150px 0
 	.action
@@ -46,6 +45,7 @@ body
 	font-weight: 500
 	font-size: 14px
 	display: inline-block
+
 .block-title
 	font: 800 36px/1.5 'Exo', sans-serif
 	margin: 0 0 30px 0
@@ -58,6 +58,7 @@ body
 		margin: 0 0 15px 0
 		line-height: 1.2
 		font-size: 20px
+
 .block-text
 	color: $dark
 	font-size: 16px
@@ -77,10 +78,11 @@ body
 	border: 2px solid $dark
 	+trs
 	cursor: pointer
+	+mq($max-width: 575px)
+		padding: 15px 20px
 	&:hover
 		color: $dark
 		background: white
-
 
 .btn-white
 	display: inline-block
@@ -96,6 +98,8 @@ body
 	letter-spacing: 0.01em
 	color: $dark
 	cursor: pointer
+	+mq($max-width: 575px)
+		padding: 15px 20px
 	&:hover
 		background: $dark
 		color: white

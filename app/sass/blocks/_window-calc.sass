@@ -1,5 +1,157 @@
 .window-calc
 	padding: 85px 0 90px
 	background: $gray-gradient2
+	user-select: none
 	.block-title
 		text-align: center
+	.container
+		max-width: 1045px
+	
+	.w-calc
+		+flex(row, between, start, wrap)
+		.column
+			+flex(column, between, center, nowrap)
+		.row
+			padding: 0 0 0 95px
+			+flex(row, between, center, nowrap)
+		&-size
+			max-width: 395px
+			width: 100%
+			.img-wrap
+				+flex(row, center, center, wrap)
+				margin: 0 0 0 20px
+				width: 300px
+				height: 300px
+				background: white
+				box-shadow: $tab-shadow
+				border-radius: 4px
+		&-row
+			margin: 0 0 20px 0
+			+flex(row, between, end, wrap)
+		&-options
+			max-width: 580px
+			width: 100%
+
+	.w-slider
+		position: relative
+		&.vertical
+			width: 4px
+			height: 200px
+			margin: 38px 0 0 0
+			.w-slider__handler
+				right: 0
+				transform: translate(-40%, 50%)
+				&:after
+					right: -6px
+					top: calc( 50% - 3px )
+					+triangle(right, 6px, $dark)
+				&:before
+					left: 130%
+					top: 50%
+					transform: translate(0, -50%)
+			.ui-widget-header
+				width: 4px
+		&.horizontal
+			width: 200px
+			height: 4px
+			margin: -20px 0 0 0
+			.ui-widget-header
+				height: 4px
+			.w-slider__handler
+				top: 100%
+				left: 50%
+				transform: translate(-50%, 50%)
+				&:after
+					top: -6px
+					left: calc( 50% - 3px )
+					+triangle(up, 6px, $dark)
+				&:before
+					top: -55%
+					left: 50%
+					transform: translate(-50%, -50%)
+		&-label
+			+flex(column, null, center, nowrap)
+			span
+				margin: 11px 0 0 0
+				text-align: center
+				text-transform: uppercase
+				font-size: 9px
+				letter-spacing: 0.2em
+		&-input
+			width: 75px
+			height: 40px
+			background: white
+			border: 1px solid lighten($dark, 65%)
+			border-radius: 4px
+			text-align: center
+			padding: 10px 0 10px 10px
+			font-size: 14px
+		&__handler
+			font-size: 14px
+			background: $dark
+			color: white
+			line-height: 1
+			position: absolute
+			cursor: pointer
+			width: 75px
+			height: 40px
+			+flex(row, center, center, nowrap)
+			border-radius: 4px
+			text-align: center
+			z-index: 3
+			&:hover
+				&:before
+					opacity: 1
+			&:after
+				content: ''
+				position: absolute
+			&:before
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				position: absolute
+				opacity: 0
+				+trs
+				border-radius: 100%
+				background: $dark
+
+	.ui-widget-content
+		border: none
+		background: lighten( $dark, 65% )
+		border-radius: 4px
+	.ui-widget-header
+		background: $yellow
+		border: none
+		border-radius: 4px
+		position: absolute
+		bottom: 0
+		left: 0
+
+	.window-types
+		+flex(row, null, null, wrap)
+		margin: 0 0 30px 0
+	.window-type
+		margin: 0 20px 0 0
+		&-item
+			+flex(row, center, center, nowrap)
+			width: 90px
+			height: 90px
+			background: white
+			border-radius: 4px
+			+trs
+			cursor: pointer
+			&.curr
+				border: 1px solid lighten($dark, 65%)
+			&.active
+				background: $yellow-gradient2
+			&:hover
+				background: $yellow
+		&-list
+			display: none
+		&__img
+			display: block
+			max-width: 70%
+			max-height: 70%
+
+
