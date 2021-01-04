@@ -2,10 +2,14 @@
 	padding: 85px 0 90px
 	background: $gray-gradient2
 	user-select: none
+	+mq($max-width: 700px)
+		display: none
 	.block-title
 		text-align: center
 	.container
 		max-width: 1045px
+		+mq($max-width: 1200px)
+			max-width: 650px
 	
 	.w-calc
 		+flex(row, between, start, wrap)
@@ -14,11 +18,15 @@
 		.row
 			padding: 0 0 0 95px
 			+flex(row, between, center, nowrap)
+			+mq($max-width: 1200px)
+				padding: 0
 		.line
-			+flex(row, null, end, nowrap)
+			+flex(row, null, end, wrap)
 		&-size
 			max-width: 395px
 			width: 100%
+			+mq($max-width: 1200px)
+				max-width: 300px
 			.img-wrap
 				+flex(row, center, center, wrap)
 				margin: 0 0 0 20px
@@ -27,15 +35,28 @@
 				background: white
 				box-shadow: $tab-shadow
 				border-radius: 4px
+				+mq($max-width: 1200px)
+					width: 200px
+			&__img
+				display: block
+				max-width: 220px
+				max-height: 200px
+				+mq($max-width: 1200px)
+					max-width: 180px
+					max-height: 180px
 		&-row
 			margin: 0 0 20px 0
 			+flex(row, between, end, wrap)
 		&-options
 			max-width: 580px
 			width: 100%
+			+mq($max-width: 1200px)
+				max-width: 300px
 		&__btn
 			padding: 25px 60px
 			min-width: 280px
+			+mq($max-width: 1200px)
+				width: 100%
 
 	.w-slider
 		position: relative
@@ -92,6 +113,9 @@
 			text-align: center
 			padding: 10px 0 10px 10px
 			font-size: 14px
+			+mq($max-width: 1200px)
+				padding: 10px 5px
+				text-align: center
 		&__handler
 			font-size: 14px
 			background: $dark
@@ -142,6 +166,8 @@
 	.window-type
 		position: relative
 		margin: 0 20px 0 0
+		+mq($max-width: 1200px)
+			margin: 0 10px 0 0
 		&-item
 			+flex(row, center, center, nowrap)
 			width: 90px
@@ -150,6 +176,9 @@
 			border-radius: 4px
 			+trs
 			cursor: pointer
+			+mq($max-width: 1200px)
+				width: 65px
+				height: 65px
 			&.curr
 				border: 1px solid lighten($dark, 65%)
 			&.active
@@ -164,24 +193,33 @@
 			top: 100%
 		&__img
 			display: block
-			max-width: 70%
-			max-height: 70%
+			max-width: 70px
+			max-height: 70px
+			+mq($max-width: 1200px)
+				max-width: 50px
+				max-height: 50px
 
 	.extra-options
 		&__title
 			text-transform: uppercase
 			font-weight: 500
+			+mq($max-width: 1200px)
+				font-size: 14px
 		&-item
 			margin: 15px 0
 			+flex(row, null, null, wrap)
 		.select
 			&.mini
 				margin: 0 0 0 22px
+				+mq($max-width: 1200px)
+					margin: 0
 
 	.extra-checkbox
 		position: relative
 		width: 260px
 		display: block
+		+mq($max-width: 1200px)
+			width: 230px
 		&:hover
 			cursor: pointer
 			.extra-checkbox__text
@@ -238,6 +276,8 @@
 	.price
 		&.dark
 			margin: 0 0 0 102px
+			+mq($max-width: 1200px)
+				margin: 0 0 0 30px
 			.price__text
 				color: white
 				background: $dark
@@ -259,6 +299,8 @@
 
 	.present
 		position: relative
+		+mq($max-width: 1200px)
+			width: 100%
 		&__title
 			text-transform: uppercase
 			font-size: 9px
@@ -278,6 +320,8 @@
 			z-index: 2
 			cursor: pointer
 			+trs
+			+mq($max-width: 1200px)
+				width: 100%
 			&.active
 				&::after
 					transform: translate(0, -50%) rotate(180deg)

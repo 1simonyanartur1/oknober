@@ -1,15 +1,16 @@
 (function ($) {
 	$(document).ready(function () {
 
+		// Переменные
 		var $windowWidthSlider = $('.w-slider.horizontal'); // слайдер выбора ширины
 		var $windowHeightSlider = $('.w-slider.vertical'); // слайдер выбора высоты
 
-		var $windowWidthSliderHandler = $('.w-slider.horizontal .w-slider__handler');
-		var $windowHeightSliderHandler = $('.w-slider.vertical .w-slider__handler');
+		var $windowWidthSliderHandler = $('.w-slider.horizontal .w-slider__handler'); // полузнок ширины
+		var $windowHeightSliderHandler = $('.w-slider.vertical .w-slider__handler'); // ползунок высоты
 
 		var $maxWindowWidth = 0; // мм зависит от типа окна (краткая запись условий)
 		var $maxWindowHeight = 0; // мм зависит от типа окна (краткая запись условий)
-
+		
 		$windowHeightSlider.slider({
 			orientation: "vertical",
 			range: "min",
@@ -65,6 +66,7 @@
 			$(this).parent('.present-list').prev('.present__curr').toggleClass('active');
 		});
 
+		// селект
 		$('.w-calc .select-list').hide();
 		$('.w-calc .select__curr').on('click', function () {
 			$(this).toggleClass('active').next('.select-list').slideToggle();

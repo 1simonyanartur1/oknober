@@ -14,33 +14,15 @@
 				$('.header').addClass('show');
 			} 
 			if ($st < 1000) {
-				// Down
+				// Up
 				$('.header').removeClass('scroll');
 			}
 			if ($st < 1050) {
-				// Down
+				// Up
 				$('.header').removeClass('show');
-			} 
-			// else {
-			// 	// Up
-			// 	$('.header').removeClass('scroll');
-			// 	$('.header').removeClass('show');
-			// }
-
-			// else {
-			// 	// Up
-			// }
-
-			// if ($st < 500) {
-			// 	$('.header').removeClass('scroll');
-			// }
+			}
 			$scrollPos = $st;
 		});
-		
-		// $scrollPos = $st;
-		// if($scrollPos > 0) {
-			// $('.header').addClass('scroll');
-		// }
 
 		// SmartMenus init
 		$(function () {
@@ -103,6 +85,8 @@
 			slidesToShow: 6,
 			slidesToScroll: 1,
 			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
 			responsive: [{
 				breakpoint: 1200,
 				settings: {
@@ -128,7 +112,9 @@
 			nextArrow: '<button class="arrow arrow-next"><img src="../img/icons/arrow-right.svg"></button>',
 			slidesToShow: 2,
 			slidesToScroll: 1,
-			infinite: true
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
 		});
 
 		$('.reviews .slider-for').slick({
@@ -147,6 +133,8 @@
 			nextArrow: '<button class="arrow arrow-next"><img src="../img/icons/arrow-bottom.svg"></button>',
 			focusOnSelect: true,
 			vertical: true,
+			autoplay: true,
+			autoplaySpeed: 5000,
 			responsive: [{
 				breakpoint: 800,
 				settings: {
