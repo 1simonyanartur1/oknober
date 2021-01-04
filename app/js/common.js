@@ -5,24 +5,42 @@
 		var $st = $(this).scrollTop();
 		$(window).scroll(function () {
 			var $st = $(this).scrollTop();
-			if ($st > 500) {
+			if ($st > 200) {
 				// Down
 				$('.header').addClass('scroll');
-			} else {
-				// Up
-				$('.header').removeClass('show');
 			}
-			if ($st < 500) {
+			if ($st > 650) {
+				// Down
+				$('.header').addClass('show');
+			} 
+			if ($st < 1000) {
+				// Down
 				$('.header').removeClass('scroll');
 			}
+			if ($st < 1050) {
+				// Down
+				$('.header').removeClass('show');
+			} 
+			// else {
+			// 	// Up
+			// 	$('.header').removeClass('scroll');
+			// 	$('.header').removeClass('show');
+			// }
+
+			// else {
+			// 	// Up
+			// }
+
+			// if ($st < 500) {
+			// 	$('.header').removeClass('scroll');
+			// }
 			$scrollPos = $st;
 		});
 		
-		$scrollPos = $st;
-		if($scrollPos > 0) {
-			$('.header').addClass('scroll');
-			$('.header').addClass('show');
-		}
+		// $scrollPos = $st;
+		// if($scrollPos > 0) {
+			// $('.header').addClass('scroll');
+		// }
 
 		// SmartMenus init
 		$(function () {

@@ -14,6 +14,8 @@
 		.row
 			padding: 0 0 0 95px
 			+flex(row, between, center, nowrap)
+		.line
+			+flex(row, null, end, nowrap)
 		&-size
 			max-width: 395px
 			width: 100%
@@ -31,6 +33,9 @@
 		&-options
 			max-width: 580px
 			width: 100%
+		&__btn
+			padding: 25px 60px
+			min-width: 280px
 
 	.w-slider
 		position: relative
@@ -76,6 +81,7 @@
 				text-align: center
 				text-transform: uppercase
 				font-size: 9px
+				opacity: .7
 				letter-spacing: 0.2em
 		&-input
 			width: 75px
@@ -131,7 +137,10 @@
 	.window-types
 		+flex(row, null, null, wrap)
 		margin: 0 0 30px 0
+		position: relative
+		z-index: 3
 	.window-type
+		position: relative
 		margin: 0 20px 0 0
 		&-item
 			+flex(row, center, center, nowrap)
@@ -149,9 +158,213 @@
 				background: $yellow
 		&-list
 			display: none
+			position: absolute
+			left: 0
+			width: 100%
+			top: 100%
 		&__img
 			display: block
 			max-width: 70%
 			max-height: 70%
 
+	.extra-options
+		&__title
+			text-transform: uppercase
+			font-weight: 500
+		&-item
+			margin: 15px 0
+			+flex(row, null, null, wrap)
+		.select
+			&.mini
+				margin: 0 0 0 22px
 
+	.extra-checkbox
+		position: relative
+		width: 260px
+		display: block
+		&:hover
+			cursor: pointer
+			.extra-checkbox__text
+				&:before
+					background: $dark
+		&__input
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			cursor: pointer
+			z-index: 2
+			&:checked ~ .extra-checkbox__text
+				&:before
+					background: $dark
+				&:after
+					opacity: 1
+		&__text
+			display: block
+			height: 30px
+			width: 100%
+			padding: 0 35px 0 0
+			line-height: 30px
+			&::before
+				content: ''
+				+trs
+				display: block
+				width: 30px
+				height: 30px
+				border-radius: 4px
+				background: white
+				border: 1px solid lighten($dark, 65%)
+				position: absolute
+				right: 0
+				bottom: 0
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: 0
+				bottom: 0
+				+trs
+				opacity: 0
+				width: 30px
+				height: 30px
+				border-radius: 4px
+				background: url($img+'icons/check3.svg') no-repeat center center
+
+	.prices
+		margin: 30px 0
+		+flex(row, null, end, wrap)
+	.price
+		&.dark
+			margin: 0 0 0 102px
+			.price__text
+				color: white
+				background: $dark
+				border: 1px solid $dark
+		&__title
+			text-transform: uppercase
+			font-size: 9px
+			margin: 0 0 5px 0
+			letter-spacing: 0.2em
+			opacity: .7
+		&__text
+			background: white
+			border-radius: 4px
+			border: 1px solid lighten($dark, 65%)
+			padding: 10px 20px
+			font: 700 20px/1 'Exo', sans-serif
+			span
+				font-size: 14px
+
+	.present
+		position: relative
+		&__title
+			text-transform: uppercase
+			font-size: 9px
+			letter-spacing: 0.2em
+			opacity: 0.7
+			margin: 0 0 9px 0
+		&__curr
+			background: white
+			border-radius: 4px 0 0 4px
+			height: 60px
+			width: 301px
+			+flex(row, null, center, nowrap)
+			padding: 0 54px
+			border: 1px solid lighten($dark, 65%)
+			border-right: none
+			position: relative
+			z-index: 2
+			cursor: pointer
+			+trs
+			&.active
+				&::after
+					transform: translate(0, -50%) rotate(180deg)
+			&:hover
+				&::after
+					opacity: 1
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: 20px
+				top: 50%
+				transform: translate(0, -50%)
+				width: 22px
+				height: 24px
+				+bg(null,null, 'icons/present.svg', no-repeat, center, center, contain)
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: 20px
+				top: 50%
+				transform: translate(0, -50%)
+				width: 22px
+				height: 24px
+				+bg(null,null, 'icons/arrow-down.svg', no-repeat, center, center, contain)
+				opacity: .3
+				+trs
+		&-list
+			border: 1px solid lighten($dark, 65%)
+			position: absolute
+			top: 95%
+			left: 0
+			width: 100%
+			background: white
+			li
+				cursor: pointer
+				width: 100%
+				padding: 10px 20px
+				+trs
+				&:hover
+					color: white
+					background: $yellow
+
+	.select
+		position: relative
+		border-radius: 4px
+		background: white
+		border: 1px solid lighten($dark, 65%)
+		padding: 7px 25px 7px 7px
+		&.mini
+			min-width: 80px
+		&__curr
+			cursor: pointer
+			font-size: 14px
+			position: relative
+			z-index: 3
+			&.active
+				&::after
+					transform: translate(0, -50%) rotate(180deg)
+			&:hover
+				&::after
+					opacity: 1
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: -15px
+				top: 50%
+				transform: translate(0, -50%)
+				width: 10px
+				height: 12px
+				+bg(null,null, 'icons/arrow-down.svg', no-repeat, center, center, contain)
+				opacity: .3
+				+trs
+		&-list
+			border: 1px solid lighten($dark, 65%)
+			position: absolute
+			top: 95%
+			left: 0
+			width: 100%
+			background: white
+			li
+				cursor: pointer
+				width: 100%
+				padding: 5px 7px
+				font-size: 14px
+				+trs
+				&:hover
+					color: $yellow

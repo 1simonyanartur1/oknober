@@ -17,7 +17,7 @@ section.window-calc
 						.w-slider__handler.ui-slider-handle
 					.w-slider-label
 						input.w-slider-input(type="number", name="w-slider-height" value="1500")
-						span высота, мм
+						span ширина, мм
 			.w-calc-options
 				.window-types
 					.window-type
@@ -60,6 +60,43 @@ section.window-calc
 								img.window-type__img(src=img+"window-types/type4-1.png", alt="")
 							.window-type-item
 								img.window-type__img(src=img+"window-types/type4-2.png", alt="")
+				.extra-options
+					.extra-options__title Выберите дополнительные элементы:
+					.extra-options-item
+						label.extra-checkbox
+							input.extra-checkbox__input(type="checkbox", name="")
+							span.extra-checkbox__text Подоконник (от 150 руб.)
+						.select.mini
+							.select__curr 150 мм
+							ul.select-list
+								li 150 мм
+								li 151 мм
+								li 152 мм
+					.extra-options-item
+						label.extra-checkbox
+							input.extra-checkbox__input(type="checkbox", name="")
+							span.extra-checkbox__text Отлив (от 100 руб.)
+					.extra-options-item
+						label.extra-checkbox
+							input.extra-checkbox__input(type="checkbox", name="")
+							span.extra-checkbox__text Монтаж (от 850 руб.)
+				.prices
+					.price
+						.price__title Обычная цена:
+						.price__text <span>от</span> 3 455 ₽
+					.price.dark
+						.price__title Цена в декабре:
+						.price__text <span>от</span> 2 764 ₽
+				.line
+					.present
+						.present__title выберите подарок:
+						.present__curr Москитная сетка
+						ul.present-list
+							li Москитная сетка
+							li Москитная сетка1
+							li Москитная сетка2
+					a.w-calc__btn.btn-yellow(href="#") Купить окно
+
 
 
 
