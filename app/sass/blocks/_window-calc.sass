@@ -54,7 +54,7 @@
 				max-width: 300px
 		&__btn
 			padding: 25px 60px
-			min-width: 280px
+			min-width: 270px
 			+mq($max-width: 1200px)
 				width: 100%
 
@@ -162,7 +162,7 @@
 		+flex(row, null, null, wrap)
 		margin: 0 0 30px 0
 		position: relative
-		z-index: 3
+		z-index: 4
 	.window-type
 		position: relative
 		margin: 0 20px 0 0
@@ -181,8 +181,10 @@
 				height: 65px
 			&.curr
 				border: 1px solid lighten($dark, 65%)
+				&.active
+					background: $yellow-gradient2
 			&.active
-				background: $yellow-gradient2
+				background: $yellow
 			&:hover
 				background: $yellow
 		&-list

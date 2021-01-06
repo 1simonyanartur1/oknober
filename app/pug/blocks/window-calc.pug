@@ -6,7 +6,7 @@ section.window-calc
 				.w-calc-row
 					.column
 						.w-slider-label
-							input.w-slider-input(type="number", name="w-slider-height" value="1500")
+							input.w-slider-input(type="number", name="w-slider-height" value="")
 							span высота, мм
 						.w-slider.vertical
 							.w-slider__handler.ui-slider-handle
@@ -16,7 +16,7 @@ section.window-calc
 					.w-slider.horizontal
 						.w-slider__handler.ui-slider-handle
 					.w-slider-label
-						input.w-slider-input(type="number", name="w-slider-height" value="1500")
+						input.w-slider-input(type="number", name="w-slider-width" value="")
 						span ширина, мм
 			.w-calc-options
 				.window-types
@@ -24,7 +24,7 @@ section.window-calc
 						.window-type-item.curr.active
 							img.window-type__img(src=img+"window-types/type1-1.png", alt="")
 						.window-type-list
-							.window-type-item
+							.window-type-item.active
 								img.window-type__img(src=img+"window-types/type1-1.png", alt="")
 							.window-type-item
 								img.window-type__img(src=img+"window-types/type1-2.png", alt="")
@@ -66,12 +66,12 @@ section.window-calc
 						label.extra-checkbox
 							input.extra-checkbox__input(type="checkbox", name="")
 							span.extra-checkbox__text Подоконник (от 150 руб.)
-						.select.mini
-							.select__curr 150 мм
-							ul.select-list
-								li 150 мм
-								li 151 мм
-								li 152 мм
+						//- .select.mini
+						//- 	.select__curr 150 мм
+						//- 	ul.select-list
+						//- 		li 150 мм
+						//- 		li 151 мм
+						//- 		li 152 мм
 					.extra-options-item
 						label.extra-checkbox
 							input.extra-checkbox__input(type="checkbox", name="")
@@ -90,9 +90,9 @@ section.window-calc
 				.line
 					.present
 						.present__title выберите подарок:
-						.present__curr Москитная сетка
+						.present__curr Без подарка
 						ul.present-list
+							li Без подарка
 							li Москитная сетка
-							li Москитная сетка1
-							li Москитная сетка2
+							li Детский замок
 					a.w-calc__btn.btn-yellow(href="#") Купить окно
