@@ -20,21 +20,23 @@ section.window-calc
 						span ширина, см
 			.w-calc-options
 				.window-types
+					//- группа 1
 					.window-type
 						.window-type-item.curr.active
 							img.window-type__img(src=img+"window-types/type1-1.png", alt="")
 						.window-type-list
-							.window-type-item.active(data-type="11")
+							.window-type-item.active(data-type="11").active
 								img.window-type__img(src=img+"window-types/type1-1.png", alt="")
 							.window-type-item(data-type="12")
 								img.window-type__img(src=img+"window-types/type1-2.png", alt="")
 							.window-type-item(data-type="13")
 								img.window-type__img(src=img+"window-types/type1-3.png", alt="")
+					//- группа 2
 					.window-type
 						.window-type-item.curr
 							img.window-type__img(src=img+"window-types/type2-1.png", alt="")
 						.window-type-list
-							.window-type-item(data-type="21")
+							.window-type-item(data-type="21").active
 								img.window-type__img(src=img+"window-types/type2-1.png", alt="")
 							.window-type-item(data-type="22")
 								img.window-type__img(src=img+"window-types/type2-2.png", alt="")
@@ -42,21 +44,23 @@ section.window-calc
 								img.window-type__img(src=img+"window-types/type2-3.png", alt="")
 							.window-type-item(data-type="24")
 								img.window-type__img(src=img+"window-types/type2-4.png", alt="")
+					//- группа 3
 					.window-type
 						.window-type-item.curr
 							img.window-type__img(src=img+"window-types/type3-1.png", alt="")
 						.window-type-list
-							.window-type-item(data-type="31")
+							.window-type-item(data-type="31").active
 								img.window-type__img(src=img+"window-types/type3-1.png", alt="")
 							.window-type-item(data-type="32")
 								img.window-type__img(src=img+"window-types/type3-2.png", alt="")
 							.window-type-item(data-type="33")
 								img.window-type__img(src=img+"window-types/type3-3.png", alt="")
+					//- группа 4
 					.window-type
 						.window-type-item.curr
 							img.window-type__img(src=img+"window-types/type4-1.png", alt="")
 						.window-type-list
-							.window-type-item(data-type="41")
+							.window-type-item(data-type="41").active
 								img.window-type__img(src=img+"window-types/type4-1.png", alt="")
 							.window-type-item(data-type="42")
 								img.window-type__img(src=img+"window-types/type4-2.png", alt="")
@@ -64,7 +68,7 @@ section.window-calc
 					.extra-options__title Выберите дополнительные элементы:
 					.extra-options-item
 						label.extra-checkbox
-							input.extra-checkbox__input(type="checkbox", name="")
+							input.extra-checkbox__input(type="checkbox", name="podokonnik")
 							span.extra-checkbox__text Подоконник (от 150 руб.)
 						//- .select.mini
 						//- 	.select__curr 150 см
@@ -74,19 +78,19 @@ section.window-calc
 						//- 		li 152 см
 					.extra-options-item
 						label.extra-checkbox
-							input.extra-checkbox__input(type="checkbox", name="")
+							input.extra-checkbox__input(type="checkbox", name="otliv")
 							span.extra-checkbox__text Отлив (от 100 руб.)
 					.extra-options-item
 						label.extra-checkbox
-							input.extra-checkbox__input(type="checkbox", name="")
+							input.extra-checkbox__input(type="checkbox", name="montaz")
 							span.extra-checkbox__text Монтаж (от 850 руб.)
 				.prices
-					.price
+					.price.light
 						.price__title Обычная цена:
-						.price__text <span>от</span> 3 455 ₽
+						.price__text <span>от</span> <b>3 455</b> ₽
 					.price.dark
 						.price__title Цена в декабре:
-						.price__text <span>от</span> 2 764 ₽
+						.price__text <span>от</span> <b>2 764</b> ₽
 				.line
 					.present
 						.present__title выберите подарок:
