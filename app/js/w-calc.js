@@ -22,7 +22,7 @@
 				},
 				povorotnoe: { // поворотное
 					min_width: 45,
-					max_width: 30,
+					max_width: 130,
 					min_height: 45,
 					max_height: 225,
 					cost: 7800
@@ -36,10 +36,59 @@
 				}
 			},
 			two_window: { // два окна
-				// типо секций из 2-х окон
+				// типы секций из 2-х окон
+				gluhoe_povorotnoe: {
+					min_width: 40*2,
+					max_width: 130*2,
+					min_height: 40,
+					max_height: 220,
+					// cost: 3510
+				},
+				gluhoe_povorotno_otkidnoe: {
+					min_width: 40*2,
+					max_width: 125*2,
+					min_height: 40,
+					max_height: 220,
+					// cost: 3510
+				},
+				povorotnoe_povorotnoe: {
+					min_width: 45*2,
+					max_width: 130*2,
+					min_height: 45,
+					max_height: 225,
+					// cost: 3510
+				},
+				povorotnoe_povorotno_otkidnoe: {
+					min_width: 45*2,
+					max_width: 125*2,
+					min_height: 45,
+					max_height: 225,
+					// cost: 3510
+				}
 			},
 			three_window: { // три окна
-				// типо секций из 3-х окон
+				// типы секций из 3-х окон
+				gluhoe_gluhoe_povorotnoe: {
+					min_width: 45*3,
+					max_width: 130*3,
+					min_height: 45,
+					max_height: 220,
+					// cost: 3510
+				},
+				povorotnoe_gluhoe_povorotnoe: {
+					min_width: 45*3,
+					max_width: 130*3,
+					min_height: 45,
+					max_height: 220,
+					// cost: 3510
+				},
+				povorotnoe_gluhoe_povorotno_otkidnoe: {
+					min_width: 45*3,
+					max_width: 125*3,
+					min_height: 50,
+					max_height: 220,
+					// cost: 3510
+				}
 			},
 			doors: { // двери
 				one_door: { // одна дверь
@@ -56,11 +105,26 @@
 					max_height: 230,
 					cost: 7800
 				}
-			}
+			},
+			window_type: 0
 			// дописать остальные доп. опции
 		}
 
-		// ф-я определяет тип окна (по data-атрибуту\id\class у каждого окна)
+		// Переменные
+		var $windowWidthSlider = $('.w-slider.horizontal'); // слайдер выбора ширины
+		var $windowHeightSlider = $('.w-slider.vertical'); // слайдер выбора высоты
+
+		var $windowWidthSliderHandler = $('.w-slider.horizontal .w-slider__handler'); // полузнок ширины
+		var $windowHeightSliderHandler = $('.w-slider.vertical .w-slider__handler'); // ползунок высоты
+
+		var $windowWidthSliderInput = $("[name='w-slider-width']");
+		var $windowHeightSliderInput = $("[name='w-slider-height']");
+
+		// первоначальные значения ширины и высоты
+		var $minWindowWidth = vars.one_window.gluhoe.min_width;
+		var $maxWindowWidth = vars.one_window.gluhoe.max_width;
+		var $minWindowHeight = vars.one_window.gluhoe.min_height;
+		var $maxWindowHeight = vars.one_window.gluhoe.max_height;
 
 		// ф-я выбора окна и подстановки его значений в калькулятор
 		function chooseWindow() {
@@ -82,46 +146,153 @@
 					$('.w-calc-size__img').attr('src', $imgSrc); // заменяем большую картинку
 				});
 			});
-			// понять как связать разметку со значениями выше
 
+			// определить текущий тип окна
+			$('.window-type-list .window-type-item').on('click', function () {
+				vars.window_type = $(this).data('type'); // номер окна
+
+				// получаем исходные данные в зависимости от типа окна
+				// первая группа
+				if (vars.window_type == 11) {
+					$minWindowWidth = vars.one_window.gluhoe.min_width;
+					$maxWindowWidth = vars.one_window.gluhoe.max_width;
+					
+					$minWindowHeight = vars.one_window.gluhoe.min_height;
+					$maxWindowHeight = vars.one_window.gluhoe.max_height;
+				}
+				if (vars.window_type == 21) {
+					$minWindowWidth = vars.one_window.povorotnoe.min_width;
+					$maxWindowWidth = vars.one_window.povorotnoe.max_width;
+					
+					$minWindowHeight = vars.one_window.povorotnoe.min_height;
+					$maxWindowHeight = vars.one_window.povorotnoe.max_height;
+				}
+				if (vars.window_type == 13) {
+					$minWindowWidth = vars.one_window.povorotno_otkidnoe.min_width;
+					$maxWindowWidth = vars.one_window.povorotno_otkidnoe.max_width;
+					
+					$minWindowHeight = vars.one_window.povorotno_otkidnoe.min_height;
+					$maxWindowHeight = vars.one_window.povorotno_otkidnoe.max_height;
+				}
+				// вторая группа
+				if (vars.window_type == 21) {
+					$minWindowWidth = vars.two_window.gluhoe_povorotnoe.min_width;
+					$maxWindowWidth = vars.two_window.gluhoe_povorotnoe.max_width;
+					
+					$minWindowHeight = vars.two_window.gluhoe_povorotnoe.min_height;
+					$maxWindowHeight = vars.two_window.gluhoe_povorotnoe.max_height;
+				}
+				if (vars.window_type == 22) {
+					$minWindowWidth = vars.two_window.gluhoe_povorotno_otkidnoe.min_width;
+					$maxWindowWidth = vars.two_window.gluhoe_povorotno_otkidnoe.max_width;
+					
+					$minWindowHeight = vars.two_window.gluhoe_povorotno_otkidnoe.min_height;
+					$maxWindowHeight = vars.two_window.gluhoe_povorotno_otkidnoe.max_height;
+				}
+				if (vars.window_type == 23) {
+					$minWindowWidth = vars.two_window.povorotnoe_povorotnoe.min_width;
+					$maxWindowWidth = vars.two_window.povorotnoe_povorotnoe.max_width;
+					
+					$minWindowHeight = vars.two_window.povorotnoe_povorotnoe.min_height;
+					$maxWindowHeight = vars.two_window.povorotnoe_povorotnoe.max_height;
+				}
+				if (vars.window_type == 24) {
+					$minWindowWidth = vars.two_window.povorotnoe_povorotno_otkidnoe.min_width;
+					$maxWindowWidth = vars.two_window.povorotnoe_povorotno_otkidnoe.max_width;
+					
+					$minWindowHeight = vars.two_window.povorotnoe_povorotno_otkidnoe.min_height;
+					$maxWindowHeight = vars.two_window.povorotnoe_povorotno_otkidnoe.max_height;
+				}
+				// третья группа
+				if (vars.window_type == 31) {
+					$minWindowWidth = vars.three_window.gluhoe_gluhoe_povorotnoe.min_width;
+					$maxWindowWidth = vars.three_window.gluhoe_gluhoe_povorotnoe.max_width;
+					
+					$minWindowHeight = vars.three_window.gluhoe_gluhoe_povorotnoe.min_height;
+					$maxWindowHeight = vars.three_window.gluhoe_gluhoe_povorotnoe.max_height;
+				}
+				if (vars.window_type == 32) {
+					$minWindowWidth = vars.three_window.povorotnoe_gluhoe_povorotnoe.min_width;
+					$maxWindowWidth = vars.three_window.gluhoe_gluhoe_povorotnoe.max_width;
+					
+					$minWindowHeight = vars.three_window.povorotnoe_gluhoe_povorotnoe.min_height;
+					$maxWindowHeight = vars.three_window.povorotnoe_gluhoe_povorotnoe.max_height;
+				}
+				if (vars.window_type == 33) {
+					$minWindowWidth = vars.three_window.povorotnoe_gluhoe_povorotno_otkidnoe.min_width;
+					$maxWindowWidth = vars.three_window.povorotnoe_gluhoe_povorotno_otkidnoe.max_width;
+					
+					$minWindowHeight = vars.three_window.povorotnoe_gluhoe_povorotno_otkidnoe.min_height;
+					$maxWindowHeight = vars.three_window.povorotnoe_gluhoe_povorotno_otkidnoe.max_height;
+				}
+				// четвертая группа - двери
+				if (vars.window_type == 41) {
+					$minWindowWidth = vars.doors.one_door.min_width;
+					$maxWindowWidth = vars.doors.one_door.max_width;
+					
+					$minWindowHeight = vars.doors.one_door.min_height;
+					$maxWindowHeight = vars.doors.one_door.max_height;
+				}
+				if (vars.window_type == 42) {
+					$minWindowWidth = vars.doors.two_door.min_width;
+					$maxWindowWidth = vars.doors.two_door.max_width;
+					
+					$minWindowHeight = vars.doors.two_door.min_height;
+					$maxWindowHeight = vars.doors.two_door.max_height;
+				}
+
+				// меняем исходные данные ширины
+				$windowWidthSlider.slider( "option", "min", $minWindowWidth )
+				$windowWidthSlider.slider( "option", "max", $maxWindowWidth )
+				$windowWidthSlider.slider( "option", "value", $minWindowWidth)
+				$windowWidthSliderInput.val($maxWindowWidth);
+				$windowWidthSliderHandler.text($minWindowWidth);
+				
+				// меняем исходные данные высоты
+				$windowHeightSlider.slider( "option", "min", $minWindowHeight )
+				$windowHeightSlider.slider( "option", "max", $maxWindowHeight )
+				$windowHeightSlider.slider( "option", "value", $minWindowHeight)
+				$windowHeightSliderInput.val($maxWindowHeight);
+				$windowHeightSliderHandler.text($minWindowHeight);
+
+				return $minWindowWidth, $maxWindowWidth, $minWindowHeight, $maxWindowHeight;
+			});
+
+			$('.block-title').on('click', function () {
+				console.log('min-w:' + $minWindowWidth + ' max-w:' + $maxWindowWidth + ' min-h:' + $minWindowHeight + ' max-h:' + $maxWindowHeight);
+			});
 		}
 		chooseWindow();
 
 		// ф-я изменяющая цену
 		function changePrice() {
-			
+			// получаем текущую ширину
+			// получаем текущую высоту
+			// определяем тип окна и считаем
 		}
 		changePrice();
 
 		// ф-я записывает финальные данные в скрытые инпуты
 		function writeVars() {
-			
+
 		}
 		writeVars();
 
-		// Переменные
-		var $windowWidthSlider = $('.w-slider.horizontal'); // слайдер выбора ширины
-		var $windowHeightSlider = $('.w-slider.vertical'); // слайдер выбора высоты
-
-		var $windowWidthSliderHandler = $('.w-slider.horizontal .w-slider__handler'); // полузнок ширины
-		var $windowHeightSliderHandler = $('.w-slider.vertical .w-slider__handler'); // ползунок высоты
-
-		var $windowWidthSliderInput = $("[name='w-slider-width']");
-		var $windowHeightSliderInput = $("[name='w-slider-height']");
-
-		var $maxWindowWidth = 0; // мм зависит от типа окна (краткая запись условий)
-		var $maxWindowHeight = 0; // мм зависит от типа окна (краткая запись условий)
 		
+
+		$windowHeightSliderInput.val($maxWindowHeight);
+		$windowWidthSliderInput.val($maxWindowWidth);
+
+
 		// Слайдеры
 		$windowHeightSlider.slider({
 			orientation: "vertical",
 			range: "min",
-			min: 0,
-			max: 100,
-			value: 60,
+			min: $minWindowHeight,
+			max: $maxWindowHeight,
+			value: $minWindowHeight,
 			create: function (event, ui) {
 				$windowHeightSliderHandler.text($(this).slider("value"));
-				$windowHeightSliderInput.val(ui.value);
 			},
 			slide: function (event, ui) {
 				$windowHeightSliderHandler.text(ui.value);
@@ -130,12 +301,11 @@
 		});
 		$windowWidthSlider.slider({
 			range: "min",
-			min: 0,
-			max: 100,
-			value: 60,
+			min: $minWindowWidth,
+			max: $maxWindowWidth,
+			value: $minWindowWidth,
 			create: function (event, ui) {
 				$windowWidthSliderHandler.text($(this).slider("value"));
-				$windowWidthSliderInput.val(ui.value);
 			},
 			slide: function (event, ui) {
 				$windowWidthSliderHandler.text(ui.value);
@@ -143,7 +313,7 @@
 			}
 		});
 
-		
+
 
 		// выбор подарка
 		$('.w-calc .present-list').hide();

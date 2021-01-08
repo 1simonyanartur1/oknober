@@ -7,7 +7,7 @@ section.window-calc
 					.column
 						.w-slider-label
 							input.w-slider-input(type="number", name="w-slider-height" value="")
-							span высота, мм
+							span высота, см
 						.w-slider.vertical
 							.w-slider__handler.ui-slider-handle
 					.img-wrap
@@ -17,48 +17,48 @@ section.window-calc
 						.w-slider__handler.ui-slider-handle
 					.w-slider-label
 						input.w-slider-input(type="number", name="w-slider-width" value="")
-						span ширина, мм
+						span ширина, см
 			.w-calc-options
 				.window-types
 					.window-type
 						.window-type-item.curr.active
 							img.window-type__img(src=img+"window-types/type1-1.png", alt="")
 						.window-type-list
-							.window-type-item.active
+							.window-type-item.active(data-type="11")
 								img.window-type__img(src=img+"window-types/type1-1.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="12")
 								img.window-type__img(src=img+"window-types/type1-2.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="13")
 								img.window-type__img(src=img+"window-types/type1-3.png", alt="")
 					.window-type
 						.window-type-item.curr
 							img.window-type__img(src=img+"window-types/type2-1.png", alt="")
 						.window-type-list
-							.window-type-item
+							.window-type-item(data-type="21")
 								img.window-type__img(src=img+"window-types/type2-1.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="22")
 								img.window-type__img(src=img+"window-types/type2-2.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="23")
 								img.window-type__img(src=img+"window-types/type2-3.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="24")
 								img.window-type__img(src=img+"window-types/type2-4.png", alt="")
 					.window-type
 						.window-type-item.curr
 							img.window-type__img(src=img+"window-types/type3-1.png", alt="")
 						.window-type-list
-							.window-type-item
+							.window-type-item(data-type="31")
 								img.window-type__img(src=img+"window-types/type3-1.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="32")
 								img.window-type__img(src=img+"window-types/type3-2.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="33")
 								img.window-type__img(src=img+"window-types/type3-3.png", alt="")
 					.window-type
 						.window-type-item.curr
 							img.window-type__img(src=img+"window-types/type4-1.png", alt="")
 						.window-type-list
-							.window-type-item
+							.window-type-item(data-type="41")
 								img.window-type__img(src=img+"window-types/type4-1.png", alt="")
-							.window-type-item
+							.window-type-item(data-type="42")
 								img.window-type__img(src=img+"window-types/type4-2.png", alt="")
 				.extra-options
 					.extra-options__title Выберите дополнительные элементы:
@@ -67,11 +67,11 @@ section.window-calc
 							input.extra-checkbox__input(type="checkbox", name="")
 							span.extra-checkbox__text Подоконник (от 150 руб.)
 						//- .select.mini
-						//- 	.select__curr 150 мм
+						//- 	.select__curr 150 см
 						//- 	ul.select-list
-						//- 		li 150 мм
-						//- 		li 151 мм
-						//- 		li 152 мм
+						//- 		li 150 см
+						//- 		li 151 см
+						//- 		li 152 см
 					.extra-options-item
 						label.extra-checkbox
 							input.extra-checkbox__input(type="checkbox", name="")
