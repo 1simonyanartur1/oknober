@@ -157,7 +157,7 @@
 		});
 
 		$(document).on('click', '.anchor', function (e) {
-			var fixed_offset = 50;
+			var fixed_offset = 150;
 			$('html, body').stop().animate({
 				scrollTop: $(this.hash).offset().top - fixed_offset
 			}, 500);
