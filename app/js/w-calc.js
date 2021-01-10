@@ -448,6 +448,8 @@
 		});
 		$('.w-calc .present-list li').on('click', function () {
 			var $text = $(this).text();
+			$('.w-calc .present-list li').removeClass('active');
+			$(this).addClass('active')
 			$('.w-calc .present__curr').text($text);
 			$(this).parent('.present-list').slideToggle();
 			$(this).parent('.present-list').prev('.present__curr').toggleClass('active');
