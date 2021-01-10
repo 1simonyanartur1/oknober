@@ -363,7 +363,7 @@
 		}
 		writeVars();
 
-		// Начальные значения
+		// Начальные значения для слайдеров
 		$windowHeightSliderInput.val($maxWindowHeight);
 		$windowWidthSliderInput.val($maxWindowWidth);
 
@@ -401,7 +401,39 @@
 		});
 
 
+		// меняем значения и пересчитываем цены при изменении input
+		$('.w-slider-input[name="w-slider-width"]').on('change', function() {
+			var min = $windowWidthSlider.slider( "option", "min");
+			var max = $windowWidthSlider.slider( "option", "max");
+			
+			if($(this).val() < min) {
+				$(this).val(min);
+			} else {}
+			if ($(this).val() > max) {
+				$(this).val(max)
+			} else {}
+			
+			$windowWidthSliderHandler.text($(this).val());
+			$windowWidthSlider.slider( "option", "value", $(this).val() );
 
+			changePrice();
+		});
+		$('.w-slider-input[name="w-slider-height"]').on('change', function() {
+			var min = $windowHeightSlider.slider( "option", "min");
+			var max = $windowHeightSlider.slider( "option", "max");
+			
+			if($(this).val() < min) {
+				$(this).val(min);
+			} else {}
+			if ($(this).val() > max) {
+				$(this).val(max)
+			} else {}
+			
+			$windowHeightSliderHandler.text($(this).val());
+			$windowHeightSlider.slider( "option", "value", $(this).val() );
+
+			changePrice();
+		});
 
 
 
