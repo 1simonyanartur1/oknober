@@ -1,10 +1,13 @@
 .mainblock
-	+bg(null, null, 'mainblock/bg.jpg', no-repeat, center, center, cover)
 	padding: 78px 0 102px 0
 	+mq($max-width: 1200px)
 		padding: 50px 0
-	+mq($max-width: 575px)
-		+bg(null, null, 'mainblock/bg2.jpg', no-repeat, center, bottom, contain)
+	&.index
+		+bg(null, null, 'mainblock/index/bg.jpg', no-repeat, center, center, cover)
+		+mq($max-width: 575px)
+			+bg(null, null, 'mainblock/index/bg2.jpg', no-repeat, center, bottom, contain)
+	&.glazing-balconies
+		+bg(null, null, 'mainblock/glazing-balconies/bg.jpg', no-repeat, center, center, cover)
 	.container
 		+flex(row, between, start, wrap)
 	.left
@@ -118,5 +121,6 @@
 						font-size: 36px
 			&__text
 				margin: 10px 0 0 0
+				font-weight: 500
 				+mq($max-width: 575px)
 					font-size: 14px
