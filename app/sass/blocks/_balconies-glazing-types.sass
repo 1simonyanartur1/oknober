@@ -1,0 +1,167 @@
+.balconies-glazing-types
+	background: $yellow-gradient
+	padding: 85px 0
+	position: relative
+	+mq($max-width: 1200px)
+		padding: 40px 0
+	.container
+		position: relative
+		z-index: 2
+	.circle1
+		display: block
+		position: absolute
+		bottom: 0
+		left: 2%
+		max-height: 90%
+	.circle2
+		display: block
+		position: absolute
+		top: 0
+		right: 5%
+		max-height: 90%
+	.circle3
+		display: block
+		position: absolute
+		right: 0
+		bottom: 0
+		max-height: 90%
+	.block-title
+		text-align: center
+	.inner
+		margin: 30px 0 0 0
+		overflow: hidden
+		border-radius: 4px
+	.tabs-list
+		+flex(row, null, null, wrap)
+		li
+			flex: 1 1 auto
+			+mq($max-width: 700px)
+				width: 100%
+			&.ui-tabs-active
+				a
+					color: $dark
+					background: white
+		a
+			border-radius: 4px 4px 0 0
+			width: 100%
+			text-align: center
+			color: white
+			background: $dark
+			padding: 22px
+			font-weight: 800
+			+mq($max-width: 700px)
+				padding: 10px
+				border-radius: 0
+			&:hover
+				background: $gray2
+				color: $dark
+	.tab
+		background: white
+		+flex(row, null, null, wrap)
+		padding: 30px 0
+		+mq($max-width: 1200px)
+			padding: 15px 0
+		+mq($max-width: 575px)
+			padding: 10px 0
+		&-left
+			padding: 0 30px
+			width: 50%
+			+mq($max-width: 1200px)
+				padding: 0 15px
+			+mq($max-width: 1000px)
+				width: 100%
+			+mq($max-width: 575px)
+				padding: 0 10px
+		&-right
+			width: 50%
+			padding: 0 30px
+			border-left: 1px solid rgba(51, 51, 51, 0.1)
+			+flex(row, null, end, wrap)
+			+mq($max-width: 1200px)
+				padding: 0 15px
+			+mq($max-width: 1000px)
+				width: 100%
+				margin: 15px 0 0 0
+		&__title
+			color: $yellow
+			font-family: 'Exo', sans-serif
+			font-weight: 800
+			line-height: 1.5
+			font-size: 24px
+			+mq($max-width: 575px)
+				font-size: 20px
+		&__subtitle
+			width: 100%
+			font-weight: 500
+			font-size: 20px
+			margin: 0 0 15px 0
+			+mq($max-width: 575px)
+				font-size: 18px
+		&__text
+			font-family: 'UniBook', sans-serif
+			line-height: 1.4
+			font-weight: 300
+			font-size: 16px
+			margin: 14px 0 30px 0
+			+mq($max-width: 575px)
+				margin: 10px 0 15px 0
+				font-size: 14px
+		&__img
+			display: block
+			width: 100%
+	.card
+		max-width: 190px
+		width: 100%
+		height: auto
+		margin: 0 30px 0 0
+		+mq($max-width: 1200px)
+			margin: 0 15px 0 0
+		+mq($max-width: 575px)
+			margin: 0 0 10px 0
+		&__img
+			display: block
+			height: 151px
+			margin: 0 auto
+		&__title
+			margin: 10px 0
+			font-weight: 700
+			font-size: 18px
+			line-height: 1.5
+			+mq($max-width: 575px)
+				font-size: 16px
+		&__price
+			padding: 10px
+			text-align: center
+			font-size: 16px
+			background: $yellow-gradient2
+			margin: 0 0 9px
+			+mq($max-width: 575px)
+				font-size: 14px
+			span
+				font-size: 20px
+				font-weight: 700
+				+mq($max-width: 575px)
+					font-size: 17px
+		&-block
+			margin: 5px 10px
+			&__title
+				font-size: 9px
+				letter-spacing: 0.2em
+				margin: 0 0 4px 0
+				text-transform: uppercase
+			&__text
+				font-size: 16px
+		&__btn
+			width: 100%
+			margin: 20px 0 0 0
+			background: white
+			border-color: $yellow
+			padding: 16.5px 10px
+			+mq($max-width: 575px)
+				padding: 15px 5px
+				font-size: 10px
+			&:hover
+				border-color: transparent
+				background: $yellow-gradient
+
+

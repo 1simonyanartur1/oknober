@@ -1,0 +1,103 @@
+.balcony-glazing-cost
+	background: $yellow-gradient
+	padding: 85px 0
+	position: relative
+	+mq($max-width: 1200px)
+		padding: 40px 0
+	.container
+		position: relative
+		z-index: 2
+	.circle1
+		display: block
+		position: absolute
+		top: 50%
+		left: 7%
+		transform: translate(0, -50%)
+		max-height: 90%
+	.circle2
+		display: block
+		position: absolute
+		top: 0
+		right: 5%
+		max-height: 90%
+	.circle3
+		display: block
+		position: absolute
+		right: 0
+		bottom: 0
+		max-height: 90%
+	.block-title
+		text-align: center
+	.action
+		text-align: center
+	.inner
+		+flex(row, start, null, wrap)
+		box-shadow: $tab-shadow
+		border-right: 4px
+		padding: 21px 13px
+		background: white
+		margin: 30px 0
+		+mq($max-width: 700px)
+			margin: 15px 0
+			padding: 10px
+	.item
+		max-width: 270px
+		width: 100%
+		margin: 0 8px
+		+mq($max-width: 1200px)
+			max-width: 48%
+			margin: 1%
+		+mq($max-width: 575px)
+			max-width: 100%
+		&__title
+			text-align: center
+			font-family: 'Exo', sans-serif
+			font-size: 18px
+			font-weight: 700
+			line-height: 1.5
+			margin: 0 0 5px 0
+			+mq($max-width: 700px)
+				font-size: 16px
+		&__img
+			display: block
+			width: 100%
+			height: auto
+			margin: 0 0 5px 0
+		&-list
+			padding: 0 15px
+			width: 100%
+			li
+				+flex(row, between, null, wrap)
+				font-size: 16px
+				margin: 0 0 6px 0
+				+mq($max-width: 700px)
+					font-size: 14px
+				span
+					width: 50%
+			&__price
+				text-align: right
+				min-width: 45%
+				width: auto !important
+				font-family: 'Exo', sans-serif
+				padding: 4px
+				background: linear-gradient(90deg, #FCB222 0%, #FFDF00 100%)
+				+mq($max-width: 700px)
+					font-size: 14px
+				span
+					font-weight: 700
+					font-size: 18px
+					width: auto
+		&__btn
+			width: 100%
+			margin: 20px 0 0 0
+			background: white
+			border-color: $yellow
+			padding: 25px 10px
+			+mq($max-width: 575px)
+				padding: 15px 5px
+				font-size: 10px
+			&:hover
+				border-color: transparent
+				background: $yellow-gradient
+
+
