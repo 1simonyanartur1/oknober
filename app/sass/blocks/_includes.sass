@@ -1,0 +1,75 @@
+.includes
+	padding: 40px 0
+	+mq($max-width: 1200px)
+		padding: 30px 0
+	.block-title
+		text-align: center
+	.inner
+		background: $gray2
+		+flex(row, between, center, wrap)
+		border-radius: 4px
+		padding: 10px
+	&-left
+		width: 33%
+		padding: 0 0 0 40px
+		+mq($max-width: 1200px)
+			width: 40%
+			padding: 0 0 0 20px
+		+mq($max-width: 1000px)
+			width: 100%
+			padding: 0
+			+flex(row, start, null, wrap)
+	&-right
+		width: 67%
+		+flex(row, center, center, wrap)
+		border-radius: 4px
+		background: white
+		box-shadow: $tab-shadow
+		padding: 40px
+		+mq($max-width: 1200px)
+			width: 60%
+			padding: 50px 25px
+		+mq($max-width: 1000px)
+			width: 100%
+			padding: 10px
+	&__img
+		display: block
+		max-width: 590px
+		width: 100%
+		+mq($max-width: 1200px)
+			max-width: 100%
+	.item
+		+flex(row, null, center, wrap)
+		&:not(:last-child)
+			margin: 0 0 8px 0
+			+mq($max-width: 1000px)
+				margin: 1%
+		+mq($max-width: 1000px)
+			width: 31.3%
+			margin: 1%
+		+mq($max-width: 800px)
+			flex-direction: column
+		+mq($max-width: 370px)
+			width: 48%
+		&-icon
+			+flex(row, center, center, wrap)
+			width: 50px
+			height: 50px
+			border-radius: 50px
+			background: $yellow-gradient
+			margin: 0 10px 0 0
+			+mq($max-width: 1000px)
+				margin: 0 0 10px 0
+		&__text
+			font-weight: 600
+			font-size: 18px
+			line-height: 1.4
+			+mq($max-width: 1000px)
+				font-size: 15px
+			+mq($max-width: 1000px)
+				text-align: center
+				line-height: 1.2
+			+mq($max-width: 575px)
+				font-size: 14px
+
+

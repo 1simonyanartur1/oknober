@@ -1,0 +1,40 @@
+.works-types
+	padding: 40px 0
+	+mq($max-width: 1200px)
+		padding: 30px 0
+	.block-title
+		text-align: center
+		margin: 0 0 15px 0
+	.inner
+		+flex(row, start, null, wrap)
+		width: calc( 100% + 30px )
+		margin: 0 0 0 -15px
+		+mq($max-width: 1200px)
+			width: 100%
+			margin: 0
+	.item
+		margin: 15px
+		background: white
+		box-shadow: $tab-shadow
+		max-width: 270px
+		width: 100%
+		overflow: hidden
+		border-radius: 4px
+		+mq($max-width: 1200px)
+			max-width: 31.3%
+			margin: 1%
+		+mq($max-width: 700px)
+			max-width: 48%
+		// +mq($max-width: 370px)
+		// 	max-width: 100%
+		&__img
+			display: block
+			width: 100%
+		&__text
+			padding: 25px 15px
+			+mq($max-width: 1200px)
+				padding: 15px 10px
+			+mq($max-width: 700px)
+				font-size: 13px
+
+
