@@ -133,8 +133,6 @@
 			nextArrow: '<button class="arrow arrow-next"><img src="../img/icons/arrow-bottom.svg"></button>',
 			focusOnSelect: true,
 			vertical: true,
-			autoplay: true,
-			autoplaySpeed: 5000,
 			responsive: [{
 				breakpoint: 800,
 				settings: {

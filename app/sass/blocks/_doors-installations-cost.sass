@@ -1,0 +1,85 @@
+.doors-installations-cost
+	background: $yellow-gradient
+	padding: 80px 0
+	position: relative
+	+mq($max-width: 1200px)
+		padding: 40px 0
+	.circle1
+		position: absolute
+		bottom: 0
+		left: 2%
+		+mq($max-width: 1200px)
+			display: none
+	.circle2
+		position: absolute
+		right: 5%
+		top: 0
+		+mq($max-width: 700px)
+			display: none
+	.circle3
+		position: absolute
+		right: 0
+		bottom: 0
+		+mq($max-width: 700px)
+			display: none
+	.block-title
+		text-align: center
+		margin: 0 0 15px 0
+		position: relative
+		z-index: 2
+	.inner
+		position: relative
+		z-index: 2
+		+flex(row, start, null, wrap)
+		width: calc( 100% + 30px )
+		margin: 0 0 0 -15px
+		+mq($max-width: 1200px)
+			width: 100%
+			margin: 0
+	.item
+		max-width: 270px
+		width: 100%
+		margin: 15px
+		+flex(column, null, null, nowrap)
+		+mq($max-width: 1200px)
+			max-width: 31.3%
+			margin: 1%
+		+mq($max-width: 700px)
+			max-width: 48%
+		+mq($max-width: 400px)
+			max-width: 100%
+		&__img
+			display: block
+			width: 100%
+			border-radius: 4px 4px 0 0
+		&-inner
+			padding: 14px 15px
+			background: white
+			border-radius: 0 0 4px 4px
+			+flex(column, between, start, nowrap)
+			flex: 1 1 auto
+			+mq($max-width: 700px)
+				padding: 8px
+		&__title
+			text-transform: uppercase
+			font-size: 19px
+			font-weight: 800
+			+mq($max-width: 700px)
+				font-size: 16px
+		&__price
+			margin: 5px 0 0 0
+			font-size: 16px
+			+mq($max-width: 700px)
+				font-size: 15px
+			span
+				font-family: 'Exo', sans-serif
+				font-size: 20px
+				font-weight: 700
+				+mq($max-width: 700px)
+					font-size: 17px
+	.action
+		text-align: center
+		margin: 50px 0 0 0
+		position: relative
+		z-index: 2
+
