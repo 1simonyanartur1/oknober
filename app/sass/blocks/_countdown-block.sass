@@ -1,0 +1,165 @@
+.countdown-block
+	padding: 80px 0
+	margin: 40px 0
+	position: relative
+	background: $yellow-gradient
+	.circle1
+		position: absolute
+		left: 6%
+		top: 0
+	.circle2
+		position: absolute
+		z-index: -1
+		right: 0
+		top: 50%
+		transform: translate(15%, -45%)
+	.circle3
+		position: absolute
+		left: 0
+		bottom: -80px
+	.block-title
+		margin: 0 0 15px 0
+	.container
+		position: relative
+	.inner
+		+flex(row, between, null, wrap)
+		position: relative
+		z-index: 2
+		margin: 0 0 35px 0
+	&-left
+		max-width: 570px
+		width: 100%
+	&-right
+		max-width: 520px
+		width: 100%
+		position: relative
+	.prices
+		max-width: 480px
+		width: 100%
+		margin: 0 0 20px 0
+		li
+			+flex(row, null, center, wrap)
+			margin: 0 0 6px 0
+		&__text
+			margin: 0 auto 0 0
+		&__old
+			text-decoration: line-through
+			font-size: 14px
+		&__curr
+			min-width: 100px
+			font-size: 14px
+			padding: 4px
+			background: white
+			margin: 0 0 0 10px
+			text-align: right
+			b
+				font-size: 18px
+				font-family: 'Exo', sans-serif
+				font-weight: 700
+	.form
+		&-item
+			margin: 0 0 10px 0
+		&__input
+			margin: 0 15px 0 0
+		&__btn
+			min-width: 255px
+	.list
+		width: 90%
+		+flex(row, start, start, wrap)
+		&-item
+			width: 50%
+			+mq($max-width: 1200px)
+				margin: 0 2%
+				max-width: 30%
+			+mq($max-width: 800px)
+				max-width: 46%
+			+mq($max-width: 575px)
+				width: 48%
+			&__title
+				font: 800 18px 'Exo', sans-serif
+				+mq($max-width: 1200px)
+					font-size: 16px
+				+mq($max-width: 575px)
+					font-size: 15px
+				span
+					font-size: 72px
+					+mq($max-width: 1200px)
+						font-size: 50px
+					+mq($max-width: 575px)
+						font-size: 36px
+			&__text
+				margin: 10px 0 0 0
+				font-weight: 500
+				+mq($max-width: 575px)
+					font-size: 14px
+	&__img
+		display: block
+		width: 100%
+		height: auto
+	.action
+		width: 100%
+		text-align: center
+		position: relative
+		z-index: 3
+
+	.counter
+		max-width: 370px
+		width: 100%
+		padding: 24px 24px 40px 24px
+		border-radius: 4px
+		background: white
+		position: absolute
+		z-index: 3
+		left: 0
+		bottom: 0
+		&__title
+			font-size: 16px
+			font-weight: 700
+			line-height: 1.2
+		&__text
+			margin: 6px 0 10px
+			font-size: 14px
+	.flipper
+		width: 100%
+		height: 70px
+		+flex(row, null, start, nowrap)
+	.flipper-group
+		+flex(row, center, null, nowrap)
+		.flipper-delimiter
+			display: none
+	.flipper-delimiter
+		opacity: 0.3
+		color: $dark
+		font-size: 50px
+		line-height: 70px
+		vertical-align: middle
+		padding: 0
+		margin: 0
+		float: left
+	.flipper-digit
+		height: 70px
+		margin: 0 2px
+		&::after
+			display: none
+	.flipper-group label
+		color: $dark
+		opacity: .7
+		font-size: 14px
+	.digit-next,
+	.digit-top,
+	.digit-top2,
+	.digit-face,
+	.digit-bottom
+		height: 70px
+		color: white
+		background: $dark
+		font-weight: 800
+		letter-spacing: 0.1em
+		font-size: 36px
+		border-radius: 4px
+		+flex(column, center, center, nowrap)
+		line-height: 1
+		padding: 0 .1em
+		&.r
+			display: none
+			padding: 0

@@ -1,0 +1,64 @@
+section.countdown-block
+	img.circle1(src=img+"countdown-block/circle1.png", alt="")
+	.container
+		img.circle3(src=img+"countdown-block/circle3.png", alt="")
+		.inner
+			.countdown-block-left
+				.block-title Ремонт балконов и лоджии под ключ
+				ul.prices
+					li
+						span.prices__text Установка освещения от
+						span.prices__old 2 200 ₽
+						span.prices__curr от 
+							b 1 200 ₽
+					li
+						span.prices__text Остекление и ремонт от
+						span.prices__old 34 000 ₽
+						span.prices__curr от 
+							b 31 500 ₽
+					li
+						span.prices__text Ремонт ограждений от
+						span.prices__old 950 ₽
+						span.prices__curr от 
+							b 650 ₽
+					li
+						span.prices__text Настил полов от
+						span.prices__old 1 430 ₽
+						span.prices__curr от 
+							b 900 ₽
+					li
+						span.prices__text Утепление от
+						span.prices__old 540 ₽
+						span.prices__curr от 
+							b 360 ₽
+					li
+						span.prices__text Отделка от
+						span.prices__old 37 000 ₽
+						span.prices__curr от 
+							b 32 000 ₽
+				form.form(action="#" method="POST")
+					.form-item
+						input.form__input(type="tel" name="q-banner-name" placeholder="+7 (___) ___-__-__")
+						button.form__btn.btn-dark(type="submit") отправить заявку
+					.form-item
+						.form__text Нажимая на кнопку, вы даете согласие на 
+							a(href="http://", target="_blank", rel="noopener noreferrer") обработку своих персональных данных.
+				.list
+					.list-item
+						.list-item__title <span>2</span> дня
+						.list-item__text средняя продолжительность ремонта
+					.list-item
+						.list-item__title <span>5</span> лет
+						.list-item__text гарантия с дальнейшим сервисом
+			.countdown-block-right
+				img.countdown-block__img(src=img+"countdown-block/img.png", alt="")
+				img.circle2(src=img+"countdown-block/circle2.png", alt="")
+				.counter
+					.counter__title Промокод зимний "НГ-2021" получите скидку до 30% на заказ от 15 000
+					.counter__text До конца акции осталось:
+					<div id="myFlipper" class="flipper" data-datetime="2021-08-02 00:00:00" data-template="dd|HH|ii|ss" data-labels="дней|часов|минут|секунд" data-reverse="true">
+					</div>
+		ul.action
+			li
+				a.btn-dark(href="#") рассчитать точную стоимость
+

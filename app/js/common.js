@@ -12,7 +12,7 @@
 			if ($st > 650) {
 				// Down
 				$('.header').addClass('show');
-			} 
+			}
 			if ($st < 1000) {
 				// Up
 				$('.header').removeClass('scroll');
@@ -162,7 +162,9 @@
 			e.preventDefault();
 		});
 
-		
+		$(function(){
+			$('#myFlipper').flipper('init');
+		});
 
 	});
 })(jQuery);
