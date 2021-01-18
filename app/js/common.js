@@ -147,6 +147,36 @@
 			}]
 		});
 
+		$('.balcony-purpose .slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.balcony-purpose .slider-nav'
+		});
+		$('.balcony-purpose .slider-nav').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.balcony-purpose .slider-for',
+			dots: false,
+			prevArrow: '<button class="arrow arrow-prev"><img src="../img/icons/arrow-top.svg"></button>',
+			nextArrow: '<button class="arrow arrow-next"><img src="../img/icons/arrow-bottom.svg"></button>',
+			focusOnSelect: true,
+			vertical: true,
+			responsive: [{
+				breakpoint: 800,
+				settings: {
+					vertical: false
+				}
+			}, {
+				breakpoint: 575,
+				settings: {
+					vertical: false,
+					slidesToShow: 2
+				}
+			}]
+		});
+
 		$(".tabs").tabs();
 
 		$('input[type="tel"]').inputmask({
@@ -162,7 +192,7 @@
 			e.preventDefault();
 		});
 
-		$(function(){
+		$(function() {
 			$('#myFlipper').flipper('init');
 		});
 
