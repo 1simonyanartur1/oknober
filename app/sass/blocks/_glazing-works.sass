@@ -1,0 +1,215 @@
+.glazing-works
+	position: relative
+	padding: 80px 0
+	margin: 40px 0
+	background: $yellow-gradient
+	+mq($max-width: 1200px)
+		padding: 30px 0
+		margin: 20px 0
+	.circle1
+		position: absolute
+		top: 5%
+		left: 3%
+		+mq($max-width: 1000px)
+			display: none
+	.circle2
+		position: absolute
+		top: 0
+		right: 3%
+		+mq($max-width: 1000px)
+			display: none
+	.circle3
+		position: absolute
+		bottom: 3%
+		right: 0
+		+mq($max-width: 1000px)
+			display: none
+	.container
+		position: relative
+		z-index: 2
+	.block-title
+		text-align: center
+	.top
+		padding: 10px
+		border-radius: 4px
+		+flex(row, between, null, wrap)
+		background: $gray2
+		&-left
+			max-width: 270px
+			width: 100%
+			color: white
+			padding: 30px
+			background: $dark
+			border-radius: 4px
+			+flex(column, center, start, nowrap)
+			position: relative
+			overflow: hidden
+			+mq($max-width: 1200px)
+				max-width: 30%
+				padding: 10px
+			+mq($max-width: 1000px)
+				max-width: 100%
+			&__title
+				text-transform: uppercase
+				font-weight: 800
+				font-size: 24px
+				font-family: 'Exo', sans-serif
+				position: relative
+				width: 100%
+				+mq($max-width: 1000px)
+					font-size: 20px
+			&__text
+				margin: 30px 0 45px 0
+		&-right
+			box-shadow: $tab-shadow
+			background: white
+			border-radius: 4px
+			max-width: 870px
+			width: 100%
+			padding: 20px
+			+flex(row, between, start, wrap)
+			+mq($max-width: 1200px)
+				max-width: 69%
+				padding: 10px
+			+mq($max-width: 1000px)
+				max-width: 100%
+			&-left
+				max-width: 350px
+				width: 100%
+				+mq($max-width: 1200px)
+					max-width: 39%
+				+mq($max-width: 400px)
+					max-width: 100%
+			&-right
+				max-width: 460px
+				width: 100%
+				+mq($max-width: 1200px)
+					max-width: 59%
+				+mq($max-width: 400px)
+					max-width: 100%
+		&__img
+			display: block
+			width: 100%
+			margin: 0 0 20px 0
+		&-price
+			&__title
+				font-size: 9px
+				text-transform: uppercase
+				opacity: 0.7
+				letter-spacing: 0.2em
+				margin: 0 0 5px 0
+			&__num
+				b
+					font-size: 20px
+					font-family: 'Exo', sans-serif
+		&-list
+			+flex(row, null, start, wrap)
+			width: calc( 100% + 17px )
+			margin: 30px 0 0 -17px
+		&-item
+			margin: 0 17px 10px
+			text-align: center
+			+flex(column, null, center, nowrap)
+			+mq($max-width: 575px)
+				margin: 1%
+				width: 48%
+			&-icon
+				+flex(row, center, center, wrap)
+				margin: 0 0 9px 0
+				border-radius: 100%
+				background: $yellow-gradient
+				border-radius: 70px
+				width: 70px
+				height: 70px
+			&__text
+				font-weight: 600
+				font-size: 14px
+	.percent
+		text-transform: uppercase
+		position: absolute
+		right: -30px
+		top: 26%
+		transform: translate(0, -50%)
+		font-size: 40px
+		font-family: 'Exo', sans-serif
+		font-weight: 800
+		+mq($max-width: 1200px)
+			right: -10px
+		+mq($max-width: 1000px)
+			font-size: 30px
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 130px
+			height: 130px
+			border-radius: 100%
+			background: $yellow-gradient
+			z-index: -1
+			+mq($max-width: 1000px)
+				width: 90px
+				height: 90px
+	.action
+		width: 100%
+		li
+			margin: 0 0 15px 0
+		li,
+		a
+			width: 100%
+
+	.bottom
+		margin: 60px 0 0 0
+		position: relative
+		&-list
+			+flex(row, between, null, wrap)
+		&__home
+			position: absolute
+			left: 50%
+			top: 50%
+			display: block
+			width: 57%
+			transform: translate(-50%, -50%)
+			+mq($max-width: 700px)
+				display: none
+		&-item
+			position: relative
+			z-index: 2
+			width: 50%
+			margin: 10px 0
+			+mq($max-width: 575px)
+				text-align: center
+			&:nth-child(even)
+				+flex(row, end, center, wrap)
+				margin-left: auto
+				+mq($max-width: 575px)
+					+flex(column, null, center, nowrap)
+				.bottom-item-icon
+					margin: 0 10px 0 0
+					+mq($max-width: 575px)
+						margin: 0 0 10px 0
+			&:nth-child(odd)
+				+flex(row, start, center, wrap)
+				margin-right: auto
+				text-align: right
+				+mq($max-width: 575px)
+					text-align: center
+					+flex(column-reverse, null, center, nowrap)
+				.bottom-item-icon
+					margin: 0 0 0 10px
+					+mq($max-width: 575px)
+						margin: 0 0 10px 0
+			&-icon
+				+flex(row, center, center, wrap)
+				background: white
+				width: 70px
+				height: 70px
+				border-radius: 100%
+			&__text
+				font-weight: 600
+				font-size: 18px
+				width: 180px
+
+

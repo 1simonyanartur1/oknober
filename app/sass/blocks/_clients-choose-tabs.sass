@@ -1,0 +1,149 @@
+.clients-choose-tabs
+	background: $yellow-gradient
+	position: relative
+	padding: 80px 0
+	margin: 40px 0
+	+mq($max-width: 1200px)
+		padding: 40px 0
+		margin: 20px 0
+	.circle1
+		position: absolute
+		left: 3%
+		bottom: 0
+		+mq($max-width: 1200px)
+			display: none
+	.circle2
+		position: absolute
+		right: 5%
+		top: 0
+		+mq($max-width: 1200px)
+			display: none
+	.circle3
+		position: absolute
+		right: 0
+		bottom: 0
+		+mq($max-width: 1200px)
+			display: none
+	.container
+		position: relative
+		z-index: 2
+	.block-title
+		text-align: center
+	.tabs-links
+		background: $dark
+		overflow: hidden
+		border-radius: 4px 4px 0 0
+		+flex(row, center, null, wrap)
+		li
+			&.ui-state-active a
+				color: $dark
+				background: white
+			&:not(:last-child) a
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					right: 0
+					z-index: 1
+					width: 1%
+					top: 5px
+					bottom: 5px
+					background: white
+					opacity: .2
+					+mq($max-width: 575px)
+						display: none
+		a
+			font-weight: 800
+			background: $dark
+			padding: 20px 45px
+			text-transform: uppercase
+			color: white
+			border-radius: 4px 4px 0 0
+			position: relative
+			+mq($max-width: 1200px)
+				padding: 15px 20px
+			+mq($max-width: 700px)
+				padding: 10px
+			+mq($max-width: 575px)
+				border-radius: 0
+	.tab
+		background: white
+		padding: 30px
+		border-radius: 0 0 4px 4px
+		+flex(row, between, start, wrap)
+		+mq($max-width: 700px)
+			padding: 10px
+			position: relative
+		&-left
+			max-width: 740px
+			width: 100%
+			+mq($max-width: 1200px)
+				max-width: 69%
+			+mq($max-width: 700px)
+				max-width: 100%
+				position: relative
+				z-index: 2
+		&-right
+			max-width: 340px
+			width: 100%
+			+mq($max-width: 1200px)
+				max-width: 30%
+			+mq($max-width: 700px)
+				position: absolute
+				right: 25px
+				top: 25px
+				opacity: .3
+		&-list
+			+flex(row, null, start, wrap)
+			margin: 0 0 30px 0
+		&-item
+			+flex(column, null, center, wrap)
+			text-align: center
+			width: 104px
+			+mq($max-width: 1200px)
+				margin: 1%
+			+mq($max-width: 575px)
+				width: 100px
+			&:not(:last-child)
+				margin: 0 15px 10px 0
+				+mq($max-width: 1200px)
+					margin: 1%
+			&-icon
+				width: 70px
+				height: 70px
+				background: $yellow-gradient
+				border-radius: 100%
+				margin: 0 0 9px 0
+				+flex(row, center, center, wrap)
+				+mq($max-width: 575px)
+					width: 40px
+					height: 40px
+			&__icon
+				+mq($max-width: 575px)
+					display: block
+					width: 60%
+			&__text
+				font-size: 14px
+				+mq($max-width: 575px)
+					font-size: 12px
+		&__img
+			display: block
+			width: 100%
+		&-price
+			+flex(row, null, center, wrap)
+			&-inner
+				margin: 0 30px 0 0
+				+mq($max-width: 575px)
+					margin: 0 0 15px 0
+					width: 100%
+			&__title
+				font-size: 9px
+				text-transform: uppercase
+				letter-spacing: 0.2em
+				margin: 0 0 5px 0
+				opacity: .7
+			&__num
+				b
+					font-size: 20px
+
+

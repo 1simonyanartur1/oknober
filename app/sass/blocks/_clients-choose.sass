@@ -1,0 +1,37 @@
+.clients-choose
+	padding: 40px 0 80px
+	background: $gray-gradient2
+	+mq($max-width: 1200px)
+		padding: 20px 0
+	.block-title
+		text-align: center
+	.wrapper
+		box-shadow: $tab-shadow
+		+bg(null, null, 'clients-choose/bg.jpg', no-repeat, left, center, cover)
+		width: 100%
+		padding: 90px 100px
+		+mq($max-width: 1200px)
+			padding: 25px
+	.inner
+		max-width: 500px
+		width: 100%
+	&__title
+		text-transform: uppercase
+		font-weight: 800
+		font-family: 'Exo', sans-serif
+		font-size: 24px
+		margin: 0 0 30px 0
+		+mq($max-width: 575px)
+			font-size: 18px
+	.item
+		+flex(row, null, center, wrap)
+		margin: 0 0 20px 0
+		&-icon
+			width: 50px
+			height: 50px
+			+flex(row, center, center, nowrap)
+			border-radius: 100%
+			background: $yellow-gradient
+			margin: 0 10px 0 0
+		&__text
+			width: calc( 100% - 70px )
