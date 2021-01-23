@@ -1,8 +1,173 @@
 .color-solutions
 	padding: 40px 0
+	+mq($max-width: 1200px)
+		padding: 30px 0
 	.block-title
 		text-align: center
 	.inner
 		background: white
 		box-shadow: $tab-shadow
 		border-radius: 0 4px 4px 0
+		+flex(row, between, null, wrap)
+		+bg(null, null, 'color-solutions/window-bg.jpg', no-repeat, left, top, cover)
+		+mq($max-width: 700px)
+			background: white
+	&-left
+		position: relative
+		width: 203px
+		+mq($max-width: 575px)
+			width: auto
+	&-right
+		padding: 30px 100px 30px 0
+		max-width: 640px
+		width: 100%
+		+mq($max-width: 1000px)
+			padding: 10px
+			width: calc( 100% - 250px )
+		+mq($max-width: 575px)
+			width: calc( 100% - 130px )
+	&-row
+		+flex(row, null, center, wrap)
+		+mq($max-width: 1000px)
+			justify-content: flex-end
+	&__text
+		font-size: 12px
+		margin: 0 0 0 15px
+		width: calc( 100% - 200px )
+		+mq($max-width: 1000px)
+			text-align: right
+			width: 100%
+			margin: 15px 0 0 0
+	&__title
+		text-transform: uppercase
+		font-family: 'Exo', sans-serif
+		font-size: 24px
+		font-weight: 800
+		margin: 0 0 20px 0
+		width: 100%
+		+mq($max-width: 1000px)
+			text-align: right
+		+mq($max-width: 575px)
+			font-size: 18px
+	.sliders
+		width: 100%
+		+mq($max-width: 1000px)
+			width: 80%
+			margin: 0 0 0 auto
+		+mq($max-width: 700px)
+			width: 100%
+		&__title
+			font-weight: 600
+			font-size: 16px
+			margin: 0 0 10px 0
+			width: 100%
+			+mq($max-width: 1000px)
+				text-align: right
+			+mq($max-width: 575px)
+				font-size: 14px
+
+	.slider
+		margin: 0 0 20px 0
+		position: relative
+	.arrow
+		z-index: 2
+		position: absolute
+		top: 50%
+		&-prev
+			transform: translate(-100%, -80%)
+			left: 0
+			+mq($max-width: 1000px)
+				transform: translate(0, -110%)
+		&-next
+			transform: translate(100%, -80%)
+			right: 0
+			+mq($max-width: 1000px)
+				transform: translate(0, -110%)
+	.slide
+		+flex(column, null, center, nowrap)
+		text-align: center
+		margin: 10px
+		cursor: pointer
+		&:hover
+			.img-wrap
+				&:before
+					background: $yellow-gradient
+					border-color: transparent
+		&.active
+			.img-wrap
+				&:before
+					background: $yellow-gradient
+					border-color: transparent
+				&:after
+					opacity: 1
+		.img-wrap
+			width: 72px
+			height: 72px
+			margin: 0 0 10px 0
+			position: relative
+			border-radius: 100%
+			&:before
+				content: ''
+				+trs
+				display: block
+				width: 80px
+				height: 80px
+				border: 1px solid rgba(51, 51, 51, 0.1)
+				position: absolute
+				border-radius: 100%
+				left: 50%
+				top: 50%
+				z-index: -1
+				transform: translate(-50%, -50%)
+			&:after
+				content: ''
+				+trs
+				display: block
+				width: 30px
+				height: 30px
+				box-shadow: 0 0 0 5px white
+				z-index: 1
+				border-radius: 100%
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				+bg(null, $yellow, 'icons/check2.svg', no-repeat, center, center, auto)
+				opacity: 0
+		&__img
+			display: block
+			width: 100%
+			border-radius: 100%
+		&__text
+			font-size: 12px
+
+	.window
+		position: relative
+		top: 0
+		left: 0
+		z-index: 2
+		height: 100%
+		position: relative
+		+mq($max-width: 575px)
+			height: auto
+			width: 121px
+		&__frame
+			display: block
+			height: 100%
+			width: auto
+			z-index: 2
+			+mq($max-width: 575px)
+				height: 300px
+		&__handle
+			display: block
+			position: absolute
+			z-index: 3
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			+mq($max-width: 575px)
+				height: 70%
+	.btn-yellow
+		padding: 25px
+		+mq($max-width: 575px)
+			padding: 15px
