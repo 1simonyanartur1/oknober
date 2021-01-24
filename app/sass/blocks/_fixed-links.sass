@@ -4,14 +4,14 @@
 	right: 0
 	top: 25%
 	+trs
-	+mq($max-width: 1500px)
-		&.enter
-			transform: translate(60%, 0)
-	+mq($max-width: 1300px)
-		&.enter
-			transform: translate(80%, 0)
 	+mq($max-width: 1200px)
 		display: none
+	// +mq($max-width: 1500px)
+	// 	&.enter
+	// 		transform: translate(60%, 0)
+	// +mq($max-width: 1300px)
+	// 	&.enter
+	// 		transform: translate(80%, 0)
 	&-link
 		width: 108px
 		height: 80px
@@ -20,6 +20,9 @@
 		text-align: center
 		color: white
 		text-transform: uppercase
+		+mq($max-width: 1500px)
+			width: 80px
+			height: 60px
 		&:hover
 			.fixed-links-link__text
 				color: $yellow
@@ -30,8 +33,12 @@
 		&__icon
 			display: block
 			height: 32px
+			+mq($max-width: 1500px)
+				height: 20px
 		&__text
 			font: 800 12px/1 'Exo', sans-serif
 			margin: 6px 0 0 0
 			+trs
 			width: 100%
+			+mq($max-width: 1500px)
+				font-size: 8px

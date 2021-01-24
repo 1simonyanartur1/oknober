@@ -63,13 +63,6 @@
 			}
 		});
 
-		$('.fixed-links').on('mouseenter', function () {
-			$(this).removeClass('enter');
-		});
-		$('.fixed-links').on('mouseleave', function () {
-			$(this).addClass('enter');
-		});
-
 		$('.consult-icon').on('click', function () {
 			$('.consult').removeClass('mini');
 		});
@@ -114,7 +107,7 @@
 			slidesToScroll: 1,
 			infinite: true,
 			autoplay: true,
-			autoplaySpeed: 1000,
+			autoplaySpeed: 1000
 		});
 
 		$('.reviews .slider-for').slick({

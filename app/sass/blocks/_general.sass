@@ -143,3 +143,10 @@ body
 		background: $yellow-gradient
 
 
+// не показываем слайдер пока он не проинициализировался
+.slider,
+.slider-for,
+.slider-nav
+	display: none !important
+	&.slick-initialized
+		display: block !important

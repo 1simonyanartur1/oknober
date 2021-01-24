@@ -11,7 +11,13 @@
 			speed: 300,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			asNavFor: '.quiz .bottom-right'
+			asNavFor: '.quiz .bottom-right',
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					adaptiveHeight: true
+				}
+			}]
 		});
 
 		$('.quiz .bottom-right').slick({
