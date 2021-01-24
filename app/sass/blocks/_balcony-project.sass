@@ -1,0 +1,179 @@
+.balcony-project
+	padding: 40px 0
+	.block-title
+		text-align: center
+	.inner
+		+flex(row, between, end, wrap)
+		background: white
+		box-shadow: $tab-shadow
+		border-radius: 4px
+		position: relative
+		padding: 20px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: -10px
+			right: -10px
+			bottom: -10px
+			top: -10px
+			border-radius: 4px
+			background: $gray2
+			z-index: -1
+	&-left,
+	&-right
+		width: 25%
+	&-center
+		width: 47%
+		position: relative
+
+	&-block
+		width: 100%
+		margin: 10px 0
+		&-row
+			+flex(row, between, center, wrap)
+		&__title
+			text-transform: uppercase
+			font-weight: 500
+		&__text
+			margin: 10px 0 0 0
+			font-size: 13px
+			line-height: 1.2
+			opacity: .5
+
+	&-variants
+		margin: 10px 0 0 -10px
+		+flex(row, null, start, wrap)
+		width: calc( 100% + 20px )
+	&-variant
+		margin: 10px 5px
+		+flex(column, null, center, wrap)
+		cursor: pointer
+		&.big
+			.img-wrap
+				width: 70px
+				height: 70px
+				&:before
+			.balcony-project-variant__text
+				font-size: 14px
+		&.active
+			.img-wrap
+				&:before
+					border-color: transparent
+					background: $yellow-gradient
+		.img-wrap
+			width: 50px
+			height: 50px
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 110%
+				height: 110%
+				border-radius: 100%
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				border: 1px solid $gray2
+				z-index: 0
+		&__img
+			display: block
+			width: 100%
+			height: auto
+			border-radius: 100%
+			position: relative
+			z-index: 2
+		&__text
+			text-align: center
+			font-size: 10px
+			margin: 5px 0 0 0
+
+	&-tab
+		+flex(row, null, start, wrap)
+		display: none
+		width: calc( 100% + 20px )
+		&.active
+			display: flex
+
+	.action
+		display: block
+		width: 100%
+		li
+			width: 100%
+		a
+			width: 100%
+
+	&__roof
+		position: absolute
+		z-index: 10
+		left: 0
+		top: 0
+		width: 91.3%
+		display: block
+		height: auto
+	&__external-lining
+		position: absolute
+		z-index: 8
+		bottom: 0
+		left: 0
+		width: 91.3%
+		display: block
+		height: auto
+	&__masonry
+		position: absolute
+		z-index: 9
+		bottom: 0
+		left: 0
+		width: 100%
+		display: block
+		height: auto
+	&__glazing-type
+		position: absolute
+		z-index: 7
+		bottom: 0
+		left: 0
+		width: 100%
+		display: block
+		height: auto
+	&__cupboard
+		position: absolute
+		z-index: 6
+		bottom: 0
+		left: 0
+		width: 100%
+		display: block
+		height: auto
+	&__interior
+		position: absolute
+		z-index: 5
+		bottom: 0
+		left: 0
+		width: 100%
+		display: block
+		height: auto
+	&__floor
+		position: absolute
+		z-index: 4
+		bottom: 0
+		left: 0
+		width: 100%
+		display: block
+		height: auto
+	&__carcass
+		position: relative
+		z-index: 1
+		display: block
+		width: 100%
+		height: auto
+
+
+.nice-select
+	padding: 0
+	margin: 0
+	line-height: 1
+	height: auto
+	width: 130px
+	padding: 10px
+	.current
+		font-size: 12px

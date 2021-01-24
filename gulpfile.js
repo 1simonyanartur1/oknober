@@ -19,8 +19,8 @@ var path = {
 		css: './app/css/',
 		gulpfile: './gulpfile.js',
 		js: './app/js/',
-		jsLibs: ['./app/libs/smartmenus/jquery.smartmenus.min.js', './app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js', './app/libs/jquery-ui-1.12.1/jquery-ui.min.js', './app/libs/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js', './app/libs/slick-carousel/slick/slick.min.js', './app/libs/flipper/jquery.flipper-responsive.js'],
-		cssLibs: ['./app/libs/smartmenus/css/sm-core-css.css', './app/libs/smartmenus/css/sm-clean/sm-clean.css', './app/libs/slick-carousel/slick/slick.css', './app/libs/flipper/style.css'],
+		jsLibs: ['./app/libs/smartmenus/jquery.smartmenus.min.js', './app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js', './app/libs/jquery-ui-1.12.1/jquery-ui.min.js', './app/libs/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js', './app/libs/slick-carousel/slick/slick.min.js', './app/libs/flipper/jquery.flipper-responsive.js', './app/libs/jquery-nice-select-master/js/jquery.nice-select.min.js'],
+		cssLibs: ['./app/libs/smartmenus/css/sm-core-css.css', './app/libs/smartmenus/css/sm-clean/sm-clean.css', './app/libs/slick-carousel/slick/slick.css', './app/libs/flipper/style.css', './app/libs/jquery-nice-select-master/css/nice-select.css'],
 		deleteLibs: ['./app/js/libs.js', './app/css/libs.css']
 	}
 }
