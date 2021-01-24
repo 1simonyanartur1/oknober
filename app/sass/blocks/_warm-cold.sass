@@ -1,83 +1,55 @@
-.balcony-project
+.warm-cold
 	padding: 40px 0
 	+mq($max-width: 1200px)
 		padding: 20px 0
+	.container
+		max-width: 900px
 	.block-title
 		text-align: center
 	.inner
-		+flex(row, between, null, wrap)
-		background: white
-		box-shadow: $tab-shadow
-		border-radius: 4px
+		+flex(row, between, end, wrap)
+
+	&-left
+		width: 59%
 		position: relative
-		padding: 20px
 		+mq($max-width: 575px)
-			padding: 10px
-		&:before
-			content: ''
-			display: block
-			position: absolute
-			left: -10px
-			right: -10px
-			bottom: -10px
-			top: -10px
-			border-radius: 4px
-			background: $gray2
-			z-index: -1
-	&-left,
-	&-right
-		width: 25%
-		+flex(column, null, null, nowrap)
-		+mq($max-width: 1000px)
 			width: 100%
-			flex-direction: row
-			flex-wrap: wrap
-			justify-content: space-between
-	&-center
-		align-self: flex-end
-		width: 47%
-		position: relative
-		+mq($max-width: 1000px)
-			width: 50%
-			order: -1
-		+mq($max-width: 400px)
-			width: 80%
+			margin: 0 0 15px 0
+	&-right
+		width: 39%
+		+flex(column, null, null, nowrap)
+		+mq($max-width: 575px)
+			width: 100%
 
 	&-block
 		width: 100%
-		margin: 10px 0
-		+mq($max-width: 1000px)
-			width: 48%
+		margin: 15px 0
+		+mq($max-width: 575px)
+			margin: 5px 0
 		&-row
 			+flex(row, between, center, wrap)
 		&__title
 			text-transform: uppercase
 			font-weight: 500
 			font-size: 14px
-			+mq($max-width: 575px)
+			+mq($max-width: 700px)
 				width: 100%
-		&__text
-			margin: 5px 0 0 0
-			font-size: 12px
-			line-height: 1.2
-			opacity: .5
 			+mq($max-width: 575px)
-				font-size: 10px
+				width: auto
 
 	&-variants
-		margin: 5px 0 0 -10px
+		margin: 10px 0 0 -10px
 		+flex(row, null, start, wrap)
 		width: calc( 100% + 20px )
-		+mq($max-width: 575px)
+		+mq($max-width: 700px)
 			margin: 5px 0 0 -5px
 			width: calc( 100% + 10px )
 	&-variant
-		margin: 5px 5px
+		margin: 10px
 		+flex(column, null, center, wrap)
 		cursor: pointer
-		&.disabled
-			pointer-events: none
-			opacity: .5
+		+mq($max-width: 700px)
+			margin: 5px
 		&.big
 			.img-wrap
 				width: 70px
@@ -85,7 +57,7 @@
 				+mq($max-width: 575px)
 					width: 40px
 					height: 40px
-			.balcony-project-variant__text
+			.warm-cold-variant__text
 				font-size: 14px
 				+mq($max-width: 575px)
 					font-size: 10px
@@ -132,6 +104,18 @@
 		&.active
 			display: flex
 
+	&__balcony
+		display: block
+		width: 100%
+		height: auto
+	&__outside
+		display: block
+		position: absolute
+		z-index: 2
+		left: 0
+		bottom: 0
+		width: 100%
+
 	.action
 		display: block
 		width: 100%
@@ -141,70 +125,6 @@
 		a
 			width: 100%
 
-	&__roof
-		position: absolute
-		z-index: 10
-		left: 0
-		top: 0
-		width: 91.3%
-		display: block
-		height: auto
-	&__external-lining
-		position: absolute
-		z-index: 8
-		bottom: 0
-		left: 0
-		width: 91.3%
-		display: block
-		height: auto
-	&__masonry
-		position: absolute
-		z-index: 9
-		bottom: 0
-		left: 0
-		width: 100%
-		display: block
-		height: auto
-	&__glazing-type
-		position: absolute
-		z-index: 7
-		bottom: 0
-		left: 0
-		width: 100%
-		display: block
-		height: auto
-	&__cupboard
-		position: absolute
-		z-index: 6
-		bottom: 0
-		left: 0
-		width: 100%
-		display: block
-		height: auto
-	&__interior
-		position: absolute
-		z-index: 5
-		bottom: 0
-		left: 0
-		width: 100%
-		display: block
-		height: auto
-	&__floor
-		position: absolute
-		z-index: 4
-		bottom: 0
-		left: 0
-		width: 100%
-		display: block
-		height: auto
-	&__carcass
-		position: relative
-		z-index: 1
-		display: block
-		width: 100%
-		height: auto
-
-
 	.nice-select
 		padding: 0
 		margin: 0
@@ -212,7 +132,7 @@
 		height: auto
 		width: 130px
 		padding: 10px
-		+mq($max-width: 575px)
+		+mq($max-width: 700px)
 			margin: 5px 0
 		.current
 			font-size: 12px

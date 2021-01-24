@@ -69,8 +69,7 @@ html
 									a(href="http://", target="_blank", rel="noopener noreferrer") обработку своих персональных данных.
 
 			include blocks/quiz.pug
-
-			//- balcony-layout
+			include blocks/balcony-project.pug
 
 			section.info-cards
 				img.circle1(src=img+"info-cards/circle1.png", alt="")
@@ -124,8 +123,8 @@ html
 							a.btn-dark(href="#") РАССЧИТАТЬ ТОЧНУЮ СТОИМОСТЬ
 
 			include blocks/additions.pug
-			//- color-solutions
 
+			include blocks/color-solutions.pug
 			include blocks/balcony-purpose.pug
 			include blocks/service.pug
 
@@ -411,3 +410,5 @@ html
 		include blocks/footer.pug
 		include blocks/scripts.pug
 		script(src="js/quiz.js" defer)
+		script(src="js/balcony-project.js" defer)
+		script(src="js/color-solutions.js" defer)

@@ -1,0 +1,64 @@
+section.warm-cold
+	.container
+		.block-title Cоздайте проект своего будущего балкона
+		.inner
+			.warm-cold-left
+				img.warm-cold__balcony(src=img+"warm-cold/glazing/v1-1.jpg", alt="")
+				img.warm-cold__outside(src=img+"warm-cold/outside/v1-1.png", alt="")
+			.warm-cold-right
+				.warm-cold-block
+					.warm-cold-block-row
+						.warm-cold-block__title Тип остекления
+					.warm-cold-variants.glazing
+						.warm-cold-variant.big.active(data-img="glazing/v1-1.jpg")
+							.img-wrap
+								img.warm-cold-variant__img(src=img+"warm-cold/glazing/v1.png", alt="")
+							.warm-cold-variant__text Холодное
+						.warm-cold-variant.big(data-img="glazing/v2-1.jpg")
+							.img-wrap
+								img.warm-cold-variant__img(src=img+"warm-cold/glazing/v2.png", alt="")
+							.warm-cold-variant__text Теплое
+
+				.warm-cold-block
+					.warm-cold-block-row
+						.warm-cold-block__title ВЫБОР НАРУЖНОЙ <br> ОБШИВКИ:
+						form.warm-cold-block-form
+							select.warm-cold-block-select(name="outside-select")
+								option(value="outside-select1" selected) Гофролист
+								option(value="outside-select2") Сайдинг
+					.warm-cold-variants
+						.warm-cold-tab.active.outside#outside-select1
+							.warm-cold-variant.active(data-img="outside/v1-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v1.png", alt="")
+							.warm-cold-variant(data-img="outside/v2-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v2.png", alt="")
+							.warm-cold-variant(data-img="outside/v3-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v3.png", alt="")
+							.warm-cold-variant(data-img="outside/v4-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v4.png", alt="")
+							.warm-cold-variant(data-img="outside/v5-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v5.png", alt="")
+						.warm-cold-tab.outside#outside-select2
+							.warm-cold-variant(data-img="outside/v6-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v1.png", alt="")
+							.warm-cold-variant(data-img="outside/v7-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v2.png", alt="")
+							.warm-cold-variant(data-img="outside/v8-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v3.png", alt="")
+							.warm-cold-variant(data-img="outside/v9-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v4.png", alt="")
+							.warm-cold-variant(data-img="outside/v10-1.png")
+								.img-wrap
+									img.warm-cold-variant__img(src=img+"warm-cold/outside/v5.png", alt="")
+				ul.action
+					li
+						a.btn-yellow(href="#") заказать балкон
