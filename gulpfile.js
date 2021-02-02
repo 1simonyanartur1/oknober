@@ -19,8 +19,8 @@ var path = {
 		css: './app/css/',
 		gulpfile: './gulpfile.js',
 		js: './app/js/',
-		jsLibs: ['./app/libs/smartmenus/jquery.smartmenus.min.js', './app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js', './app/libs/jquery-ui-1.12.1/jquery-ui.min.js', './app/libs/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js', './app/libs/slick-carousel/slick/slick.min.js', './app/libs/flipper/jquery.flipper-responsive.js', './app/libs/jquery-nice-select-master/js/jquery.nice-select.min.js'],
-		cssLibs: ['./app/libs/smartmenus/css/sm-core-css.css', './app/libs/smartmenus/css/sm-clean/sm-clean.css', './app/libs/slick-carousel/slick/slick.css', './app/libs/flipper/style.css', './app/libs/jquery-nice-select-master/css/nice-select.css'],
+		jsLibs: ['./app/', './app/', './app/', './app/', './app/', './app/', './'],
+		cssLibs: ['./app/', './app/', './app/', './app/', './app/'],
 		deleteLibs: ['./app/js/libs.js', './app/css/libs.css']
 	}
 }
@@ -40,7 +40,8 @@ gulp.task('pug', function() {
 gulp.task('sass', function() {
 	return gulp.src(path.app.sass)
 	.pipe(sourcemaps.init())
-	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	// .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefixer ({
 		overrideBrowserslist: ['last 2 versions'],
 		cascade: false
@@ -76,7 +77,8 @@ gulp.task('prod', function () {
 			.pipe(gulp.dest('./dist/'));
 });
 gulp.task('clean-prod', function () {
-	return gulp.src(['./dist/libs/', './dist/sass/', './dist/pug/'])
+	// return gulp.src(['./dist/libs/', './dist/sass/', './dist/pug/'])
+	return gulp.src(['./dist/sass/', './dist/pug/'])
 		.pipe(clean());
 });
 gulp.task('clean-dist', function () {
