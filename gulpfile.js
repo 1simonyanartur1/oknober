@@ -7,8 +7,6 @@ var gulp = require('gulp'),
 		formatHtml  = require('gulp-format-html'),
 		browserSync = require('browser-sync'),
 		concat = require('gulp-concat'),
-		cleanCSS = require('gulp-clean-css'),
-		sourcemaps = require('gulp-sourcemaps'),
 		clean = require('gulp-clean');
 
 var path = {
@@ -17,8 +15,7 @@ var path = {
 		html: './app/',
 		sass: './app/sass/**/*.sass',
 		css: './app/css/',
-		gulpfile: './gulpfile.js',
-		js: './app/js/',
+		js: './app/js/*.js',
 		jsLibs: ['./app/', './app/', './app/', './app/', './app/', './app/', './'],
 		cssLibs: ['./app/', './app/', './app/', './app/', './app/'],
 		deleteLibs: ['./app/js/libs.js', './app/css/libs.css']
@@ -63,7 +60,8 @@ gulp.task('browser-sync', function() {
 
 // Auto reload browser on change js files
 gulp.task('scripts', function() {
-	return gulp.src(path.app.gulpfile)
+	return gulp.src(path.app.js)
+	.pipe(gulp.dest('./app/js/compilejs/'))
 	.pipe(browserSync.reload({ stream: true }))
 });
 
@@ -107,7 +105,7 @@ gulp.task('concat-css', function() {
 gulp.task('watch', function () {
 	gulp.watch(path.app.sass, gulp.series('sass'))
 	gulp.watch(path.app.pug, gulp.series('pug'))
-	gulp.watch([path.app.gulpfile, path.app.js], gulp.series('scripts'))
+	gulp.watch(path.app.js, gulp.series('scripts'))
 });
 // Work with auto reload
 gulp.task('start', gulp.parallel('browser-sync', 'watch'));

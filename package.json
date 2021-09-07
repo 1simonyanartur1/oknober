@@ -19,7 +19,10 @@
     "gulp-sass": "^4.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^3.0.0",
+    "webpack": "^5.52.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "gulp": "^4.0.2"
